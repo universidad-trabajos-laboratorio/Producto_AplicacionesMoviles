@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gradient_login"
+    android:paddingTop="44dp"
+    android:paddingBottom="44dp"
+    tools:context=".Fragments.UserAuthFragment">
+
+    <LinearLayout
+        android:id="@+id/app_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="HOSPITAL DE APOYO"
+            android:textColor="#F8F8F8"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SAN IGNACIO DE CASMA"
+            android:textColor="#F8F8F8"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="121sp"
+        android:layout_height="121sp"
+        android:src="@drawable/ic_logoapp"
+        app:layout_constraintBottom_toTopOf="@+id/app_tituloDescripcion"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/app_header" />
+
+
+    <LinearLayout
+        android:id="@+id/app_tituloDescripcion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_linedecoration" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/app_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:text="SAN IGNACIO APP"
+                android:textAlignment="center"
+                android:textColor="#45BCFF"
+                android:textSize="32sp" />
+
+            <TextView
+                android:id="@+id/app_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Una aplicacion para la gestión de reservas de consultas médicas"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_linedecoration" />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="40dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/uns"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/app_tituloDescripcion">
+
+        <Button
+            android:id="@+id/btn_abrirLogin"
+            android:layout_width="275sp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border_btn"
+            android:backgroundTint="#fff"
+            android:text="Iniciar Sesión"
+            android:textAllCaps="false"
+            android:textColor="#282828"
+            android:textSize="16sp"
+
+            />
+
+        <Button
+            android:id="@+id/btn_abrirRegistrarse"
+            android:layout_width="275sp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/border_btn"
+            android:backgroundTint="#163457"
+            android:text="Registrarse"
+            android:textAllCaps="false"
+            android:textColor="#A9A9A9"
+            android:textSize="16sp" />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/uns"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@uns"
+        android:textAlignment="center"
+        android:textColor="#C2C2C2"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
