@@ -2,4 +2,18 @@
     <string name="app_name">Producto_AplicacionesMoviles</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="uns">@uns</string>
+    <string name="hospital_nombre">SAN IGNACIO DE CASMA</string>
+    <string name="hospital_tipo">Hospital de Apoyo</string>
+    <string name="app_titulo">SAN IGNACIO APP</string>
+    <string name="app_descripcion">Una aplicacion para la gestión de reservas de consultas médicas</string>
+    <string name="title_activity_app">AppActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
 </resources>

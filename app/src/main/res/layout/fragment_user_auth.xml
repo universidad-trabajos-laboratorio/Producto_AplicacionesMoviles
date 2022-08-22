@@ -18,16 +18,17 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
+            android:textAllCaps="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="HOSPITAL DE APOYO"
+            android:text="@string/hospital_tipo"
             android:textColor="#F8F8F8"
             android:textSize="16sp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="SAN IGNACIO DE CASMA"
+            android:text="@string/hospital_nombre"
             android:textColor="#F8F8F8"
             android:textSize="20sp"
             android:textStyle="bold" />
@@ -71,16 +72,16 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
 
-                android:text="SAN IGNACIO APP"
+                android:text="@string/app_titulo"
                 android:textAlignment="center"
-                android:textColor="#45BCFF"
+                android:textColor="@color/app_titulo"
                 android:textSize="32sp" />
 
             <TextView
                 android:id="@+id/app_title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Una aplicacion para la gestión de reservas de consultas médicas"
+                android:text="@string/app_descripcion"
                 android:textAlignment="center"
                 android:textColor="#FFFFFF"
                 android:textSize="14sp" />
@@ -140,7 +141,7 @@
         android:id="@+id/uns"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@uns"
+        android:text="@string/uns"
         android:textAlignment="center"
         android:textColor="#C2C2C2"
         android:textSize="16sp"

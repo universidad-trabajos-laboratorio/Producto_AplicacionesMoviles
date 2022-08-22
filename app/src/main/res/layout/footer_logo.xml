@@ -13,7 +13,7 @@
             android:layout_width="43dp"
             android:layout_height="41dp"
             android:src="@drawable/ic_logoapp"
-            app:tint="#0187BA" />
+            app:tint="@color/app_celeste" />
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -25,14 +25,14 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Hospital de Apoyo"
+                android:text="@string/hospital_tipo"
                 android:textColor="#F8F8F8"
                 android:textSize="14sp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="SAN IGNACIO DE CASMA"
+                android:text="@string/hospital_nombre"
                 android:textColor="#F8F8F8"
                 android:textSize="16sp"
                 android:textStyle="bold" />
