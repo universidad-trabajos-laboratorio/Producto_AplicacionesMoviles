@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -47,28 +48,27 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Username"
+                android:text="Email"
                 android:textColor="#FFFFFF"
                 android:textSize="12sp" />
 
             <EditText
+                android:id="@+id/inputTextLogin"
+                style="@style/styleInputTextLogin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/border_bottom_color"
-                android:hint="Escribe tu pinshe nombre"
-                android:padding="8dp"
-                android:textColor="#fff"
-                android:textColorHint="#068DC0"
-                android:textSize="16sp"
+                android:hint="correo@gmail.com"
+                android:inputType="textEmailAddress"
 
                 />
+
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="8dp"
             android:orientation="vertical">
 
             <TextView
@@ -79,24 +79,20 @@
                 android:textSize="12sp" />
 
             <EditText
+                android:id="@+id/inputTextPassword"
+                style="@style/styleInputTextLogin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/border_bottom_color"
-                android:hint="Aqui tambien causita"
-                android:padding="8dp"
-                android:textColor="#fff"
-                android:textColorHint="#068DC0"
-                android:textSize="16sp"
-
-                />
+                android:hint="Digite su password aqui" />
 
         </LinearLayout>
 
         <Button
+            android:id="@+id/btnIngresar"
+            style="@style/styleButtonLogin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
-            android:background="@drawable/border_btn"
             android:backgroundTint="#0CA34F"
             android:text="Ingresar"
             android:textColor="#FFFFFF"
@@ -124,5 +120,6 @@
         android:textColor="#C2C2C2"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
