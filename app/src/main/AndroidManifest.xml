@@ -4,6 +4,7 @@
     package="com.example.producto_aplicacionesmoviles" >
 
     <application
+        android:name=".FirestoreCleanArchitectureApp"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -13,11 +14,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Producto_AplicacionesMoviles"
         tools:targetApi="31" >
+
         <activity
-            android:name=".AppActivity"
-            android:exported="false"
-            android:label="@string/title_activity_app"
-            android:theme="@style/Theme.Producto_AplicacionesMoviles.NoActionBar" />
+            android:name=".presentation.MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".SplashActivity"
             android:exported="true"
@@ -28,6 +34,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity
             android:name=".MainActivity"
             android:exported="false" />
