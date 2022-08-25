@@ -81,6 +81,7 @@
             <EditText
                 android:id="@+id/inputTextPassword"
                 style="@style/styleInputTextLogin"
+                android:inputType="textPassword"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Digite su password aqui" />
