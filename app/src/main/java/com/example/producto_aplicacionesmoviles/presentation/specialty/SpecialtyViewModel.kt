@@ -1,8 +1,9 @@
-package com.example.producto_aplicacionesmoviles.presentation.books
+package com.example.producto_aplicacionesmoviles.presentation.specialty
 
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
+import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.producto_aplicacionesmoviles.domain.models.Response
@@ -26,22 +27,22 @@ class SpecialtyViewModel @Inject constructor(
         private set
 
     init {
-        getBooks()
+        getSpecialties()
     }
 
-    private fun getBooks() = viewModelScope.launch {
+    fun getSpecialties() = viewModelScope.launch {
         useCases.getSpecialty().collect { response ->
             specialtiesResponse = response
         }
     }
 
-    fun addBook(name: String, icon: String) = viewModelScope.launch {
+    fun addSpeciality(name: String, icon: String) = viewModelScope.launch {
         useCases.addSpecialty(name, icon).collect { response ->
             addSpecialtyResponse = response
         }
     }
 
-    fun deleteBook(specialtyId: String) = viewModelScope.launch {
+    fun deleteSpeciality(specialtyId: String) = viewModelScope.launch {
         useCases.deleteSpecialty(specialtyId).collect { response ->
             deleteSpecialtyResponse = response
         }

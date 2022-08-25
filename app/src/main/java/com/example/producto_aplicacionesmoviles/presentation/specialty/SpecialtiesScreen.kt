@@ -1,13 +1,12 @@
-package com.example.producto_aplicacionesmoviles.presentation.books
+package com.example.producto_aplicacionesmoviles.presentation.specialty
 
 import androidx.compose.material.Scaffold
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.example.producto_aplicacionesmoviles.components.ProgressBar
-import com.example.producto_aplicacionesmoviles.presentation.books.components.AddBookAlertDialog
-import com.example.producto_aplicacionesmoviles.presentation.books.components.AddBookFloatingActionButton
-import com.example.producto_aplicacionesmoviles.presentation.books.components.BooksContent
+import com.example.producto_aplicacionesmoviles.presentation.specialty.components.AddBookAlertDialog
+import com.example.producto_aplicacionesmoviles.presentation.specialty.components.AddBookFloatingActionButton
+import com.example.producto_aplicacionesmoviles.presentation.specialty.components.BooksContent
 import com.example.producto_aplicacionesmoviles.components.TopBar
 import com.example.producto_aplicacionesmoviles.core.Utils.Companion.printMessage
 import com.example.producto_aplicacionesmoviles.domain.models.Response
@@ -28,7 +27,7 @@ fun SpecialtiesScreen(
                         padding = padding,
                         specialties = specialtiesResponse.data,
                         deleteSpecialty = { specialtyId ->
-                            viewModel.deleteBook(specialtyId)
+                            viewModel.deleteSpeciality(specialtyId)
                         }
                     )
                     AddBookAlertDialog(
@@ -37,7 +36,7 @@ fun SpecialtiesScreen(
                             viewModel.closeDialog()
                         },
                         addBook = { name, icon ->
-                            viewModel.addBook(name, icon)
+                            viewModel.addSpeciality(name, icon)
                         }
                     )
                 }

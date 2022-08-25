@@ -1,4 +1,4 @@
-package com.example.producto_aplicacionesmoviles.presentation.books.components
+package com.example.producto_aplicacionesmoviles.presentation.specialty.components
 
 import androidx.compose.material.FloatingActionButton
 import androidx.compose.material.Icon

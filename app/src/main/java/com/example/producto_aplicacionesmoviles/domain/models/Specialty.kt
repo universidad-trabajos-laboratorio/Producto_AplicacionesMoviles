@@ -31,6 +31,5 @@ data class Specialty(
             }
             return specialties
         }
-
     }
 }
