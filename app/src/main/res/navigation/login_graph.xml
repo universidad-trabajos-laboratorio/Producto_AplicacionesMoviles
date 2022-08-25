@@ -12,9 +12,7 @@
         tools:layout="@layout/fragment_user_auth" >
         <action
             android:id="@+id/action_userAuthFragment_to_userLoginFragment"
-            app:destination="@id/userLoginFragment"
-            app:enterAnim="@android:anim/slide_in_left"
-            app:exitAnim="@android:anim/slide_out_right" />
+            app:destination="@id/userLoginFragment" />
         <action
             android:id="@+id/action_userAuthFragment_to_userRegisterFragment"
             app:destination="@id/userRegisterFragment" />

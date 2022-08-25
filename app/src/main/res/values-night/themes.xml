@@ -13,6 +13,10 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+    <style name="StylesAuth" parent="Theme.Producto_AplicacionesMoviles">
+        <item name="android:statusBarColor" tools:targetApi="l">#0A2059</item>
+        <item name="android:navigationBarColor" tools:targetApi="l">#002445</item>
+    </style>
     <style name="styleButtonLogin" parent="Widget.MaterialComponents.Button">
         <item name="android:paddingStart">20dp</item>
         <item name="android:paddingEnd">20dp</item>
@@ -21,6 +25,13 @@
         <item name="cornerRadius">14dp</item>
         <item name="textAllCaps">false</item>
         <item name="android:textSize">16sp</item>
+    </style>
+    <style name="SplashTheme" parent="Theme.Design.NoActionBar">
+        <item name="android:windowBackground">
+            @drawable/splash_background
+        </item>
+        <item name="android:statusBarColor" tools:targetApi="l">#0A2059</item>
+        <item name="android:navigationBarColor" tools:targetApi="l">#002445</item>
     </style>
     <style name="styleInputTextLogin" parent="Widget.AppCompat.EditText">
         <item name="backgroundTint">#057AA7</item>

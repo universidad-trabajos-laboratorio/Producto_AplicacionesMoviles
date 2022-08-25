@@ -8,6 +8,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import com.example.producto_aplicacionesmoviles.AppActivity
+import com.example.producto_aplicacionesmoviles.AuthActivity
+import com.example.producto_aplicacionesmoviles.MainActivity
 import com.example.producto_aplicacionesmoviles.databinding.FragmentUserLoginBinding
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
@@ -26,29 +28,46 @@ class UserLoginFragment : Fragment() {
         return view
     }
 
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.btnIngresar.setOnClickListener {
-            val email = binding.inputTextLogin.text.toString()
-            val password = binding.inputTextPassword.text.toString()
-            println("INICIANDO SESION")
+            login(binding.inputTextLogin.text.toString(), binding.inputTextPassword.text.toString())
+        }
+    }
+
+    private fun login(email: String, password: String) {
+        if (isCorrectCredentials(email, password)) {
             Firebase.auth.signInWithEmailAndPassword(email, password)
                 .addOnCompleteListener { task ->
                     if (task.isSuccessful) {
-                        startActivity(Intent(this.activity, AppActivity::class.java))
+                        openApp()
                         this.activity?.finish()
                     } else {
-                        Toast.makeText(
-                            this.activity?.baseContext,
-                            "Autenticacion fallida :c",
-                            Toast.LENGTH_SHORT
-                        ).show()
-                        println("ERROR AL INICIAR SESION")
+                        showMessageError(task.exception?.localizedMessage.toString())
                     }
                 }
-
         }
+    }
 
+    private fun openApp() {
+        startActivity(Intent(context, AppActivity::class.java))
+    }
+
+    private fun isCorrectCredentials(email: String, password: String): Boolean {
+        if (email.isNotEmpty() && password.isNotEmpty()) {
+            return true
+        }
+        showMessageError("Fields cannot be empty")
+        return false
+    }
+
+    private fun showMessageError(message: String) {
+        Toast.makeText(
+            this.activity?.baseContext,
+            message,
+            Toast.LENGTH_SHORT
+        ).show()
     }
 
     override fun onDestroy() {

@@ -11,48 +11,49 @@ import com.google.firebase.ktx.Firebase
 
 class AuthActivity : AppCompatActivity() {
     private lateinit var binding: ActivityAuthBinding
-    private lateinit var auth: FirebaseAuth
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityAuthBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        auth = Firebase.auth
     }
 
 
 
-    private fun createAccount(email: String, password: String) {
-        println("CREANDO CUENTA")
-        auth.createUserWithEmailAndPassword(email, password).addOnCompleteListener{ task ->
-            if (task.isSuccessful) {
-                val user = auth.currentUser
-                val message = user?.email
-                println("EL CORREO DEL CAUSITA ES")
-                println(message)
-            } else {
-                Toast.makeText(baseContext, "Autenticacion fallida :c", Toast.LENGTH_SHORT).show()
-                println("ERROR AL CREAR CUENTA")
-            }
-        }
-    }
+
+//
+//    private fun createAccount(email: String, password: String) {
+//        println("CREANDO CUENTA")
+//        auth.createUserWithEmailAndPassword(email, password).addOnCompleteListener{ task ->
+//            if (task.isSuccessful) {
+//                val user = auth.currentUser
+//                val message = user?.email
+//                println("EL CORREO DEL CAUSITA ES")
+//                println(message)
+//            } else {
+//                Toast.makeText(baseContext, "Autenticacion fallida :c", Toast.LENGTH_SHORT).show()
+//                println("ERROR AL CREAR CUENTA")
+//            }
+//        }
+//    }
 
 
-    private fun signIn(email: String, password: String) {
-        println("INICIANDO SESION")
-        auth.signInWithEmailAndPassword(email, password).addOnCompleteListener { task ->
-            if (task.isSuccessful) {
-                val user = auth.currentUser
-                val message = user?.email
-                println("EL CORREO DEL CAUSITA ES")
-                println(message)
-            } else {
-                Toast.makeText(baseContext, "Autenticacion fallida :c", Toast.LENGTH_SHORT).show()
-                println("ERROR AL INICIAR SESION")
-            }
-        }
-    }
-    private fun signOut() {
-        auth.signOut()
-    }
+//    private fun signIn(email: String, password: String) {
+//        println("INICIANDO SESION")
+//        auth.signInWithEmailAndPassword(email, password).addOnCompleteListener { task ->
+//            if (task.isSuccessful) {
+//                val user = auth.currentUser
+//                val message = user?.email
+//                println("EL CORREO DEL CAUSITA ES")
+//                println(message)
+//            } else {
+//                Toast.makeText(baseContext, "Autenticacion fallida :c", Toast.LENGTH_SHORT).show()
+//                println("ERROR AL INICIAR SESION")
+//            }
+//        }
+//    }
+//    private fun signOut() {
+//        auth.signOut()
+//    }
+
 }

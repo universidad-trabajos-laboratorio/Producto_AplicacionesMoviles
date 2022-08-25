@@ -19,51 +19,5 @@
         app:layout_constraintTop_toTopOf="parent"
         app:navGraph="@navigation/login_graph" />
 
-    <!--    <EditText-->
-    <!--        android:id="@+id/correo"-->
-    <!--        android:layout_width="match_parent"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:inputType="textEmailAddress"-->
-    <!--        android:text="a.llontopmeza@gmail.com"-->
-    <!--        app:layout_constraintBottom_toTopOf="@+id/password" />-->
-
-    <!--    <EditText-->
-    <!--        android:id="@+id/password"-->
-    <!--        android:layout_width="match_parent"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:inputType="textPassword"-->
-    <!--        android:text="a1b2e3l4"-->
-    <!--        app:layout_constraintBottom_toTopOf="@+id/registrarse"-->
-    <!--        tools:layout_editor_absoluteX="0dp" />-->
-
-    <!--    <Button-->
-    <!--        android:id="@+id/iniciarSesion"-->
-    <!--        android:layout_width="wrap_content"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:layout_marginBottom="320dp"-->
-    <!--        android:text="Iniciar Sesion"-->
-    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
-    <!--        app:layout_constraintEnd_toEndOf="parent"-->
-    <!--        app:layout_constraintHorizontal_bias="0.498"-->
-    <!--        app:layout_constraintStart_toStartOf="parent" />-->
-
-    <!--    <Button-->
-    <!--        android:id="@+id/registrarse"-->
-    <!--        android:layout_width="wrap_content"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:text="Crear cuenta"-->
-    <!--        app:layout_constraintBottom_toTopOf="@+id/iniciarSesion"-->
-    <!--        app:layout_constraintEnd_toEndOf="parent"-->
-    <!--        app:layout_constraintStart_toStartOf="parent" />-->
-
-    <!--    <Button-->
-    <!--        android:id="@+id/cerrarSesion"-->
-    <!--        android:layout_width="wrap_content"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:layout_marginBottom="60dp"-->
-    <!--        android:text="Cerrar Sesion"-->
-    <!--        app:layout_constraintBottom_toTopOf="@+id/iniciarSesion"-->
-    <!--        app:layout_constraintEnd_toEndOf="parent"-->
-    <!--        app:layout_constraintStart_toStartOf="parent" />-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>
