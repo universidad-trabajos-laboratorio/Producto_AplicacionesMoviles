@@ -3,7 +3,6 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/ANDROID/Proyectos/Producto_AplicacionesMoviles/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1575" />
         <entry key="..\:/ANDROID/Proyectos/Producto_AplicacionesMoviles/app/src/main/res/drawable/bg_gradient_login.xml" value="0.124" />
         <entry key="..\:/ANDROID/Proyectos/Producto_AplicacionesMoviles/app/src/main/res/drawable/border_bottom_color.xml" value="0.2595" />
         <entry key="..\:/ANDROID/Proyectos/Producto_AplicacionesMoviles/app/src/main/res/drawable/border_btn.xml" value="0.152" />
@@ -11,14 +10,21 @@
         <entry key="..\:/ANDROID/Proyectos/Producto_AplicacionesMoviles/app/src/main/res/drawable/ic_logoapp.xml" value="0.124" />
         <entry key="..\:/ANDROID/Proyectos/Producto_AplicacionesMoviles/app/src/main/res/drawable/logo_splash.xml" value="0.123" />
         <entry key="..\:/ANDROID/Proyectos/Producto_AplicacionesMoviles/app/src/main/res/drawable/splash_background.xml" value="0.2" />
-        <entry key="..\:/ANDROID/Proyectos/Producto_AplicacionesMoviles/app/src/main/res/layout/activity_app.xml" value="0.17552083333333332" />
-        <entry key="..\:/ANDROID/Proyectos/Producto_AplicacionesMoviles/app/src/main/res/layout/activity_auth.xml" value="0.17552083333333332" />
-        <entry key="..\:/ANDROID/Proyectos/Producto_AplicacionesMoviles/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/ANDROID/Proyectos/Producto_AplicacionesMoviles/app/src/main/res/layout/activity_auth.xml" value="0.25416666666666665" />
+        <entry key="..\:/ANDROID/Proyectos/Producto_AplicacionesMoviles/app/src/main/res/layout/activity_main.xml" value="0.20863616930312098" />
         <entry key="..\:/ANDROID/Proyectos/Producto_AplicacionesMoviles/app/src/main/res/layout/footer_logo.xml" value="0.25416666666666665" />
-        <entry key="..\:/ANDROID/Proyectos/Producto_AplicacionesMoviles/app/src/main/res/layout/fragment_user_auth.xml" value="0.264" />
-        <entry key="..\:/ANDROID/Proyectos/Producto_AplicacionesMoviles/app/src/main/res/layout/fragment_user_login.xml" value="0.264" />
+        <entry key="..\:/ANDROID/Proyectos/Producto_AplicacionesMoviles/app/src/main/res/layout/fragment_user_auth.xml" value="0.1" />
+        <entry key="..\:/ANDROID/Proyectos/Producto_AplicacionesMoviles/app/src/main/res/layout/fragment_user_login.xml" value="0.1" />
         <entry key="..\:/ANDROID/Proyectos/Producto_AplicacionesMoviles/app/src/main/res/layout/fragment_user_register.xml" value="0.20863616930312098" />
         <entry key="..\:/ANDROID/Proyectos/Producto_AplicacionesMoviles/app/src/main/res/layout/pruebadediseno.xml" value="0.264" />
+        <entry key="..\:/Josue/UNS-temp/Z-IX CICLO/Aplicaciones Moviles/PRODUCTO/Producto_AplicacionesMoviles/app/src/main/res/layout/activity_main.xml" value="0.18802083333333333" />
+        <entry key="..\:/Josue/UNS-temp/Z-IX CICLO/Aplicaciones Moviles/PRODUCTO/Producto_AplicacionesMoviles/app/src/main/res/layout/activity_specialties.xml" value="0.36666666666666664" />
+        <entry key="..\:/Josue/UNS-temp/Z-IX CICLO/Aplicaciones Moviles/PRODUCTO/Producto_AplicacionesMoviles/app/src/main/res/layout/activity_test.xml" value="0.18020833333333333" />
+        <entry key="..\:/Josue/UNS-temp/Z-IX CICLO/Aplicaciones Moviles/PRODUCTO/Producto_AplicacionesMoviles/app/src/main/res/layout/fragment_list_specialties.xml" value="0.36666666666666664" />
+        <entry key="..\:/Josue/UNS-temp/Z-IX CICLO/Aplicaciones Moviles/PRODUCTO/Producto_AplicacionesMoviles/app/src/main/res/layout/fragment_main.xml" value="0.36666666666666664" />
+        <entry key="..\:/Josue/UNS-temp/Z-IX CICLO/Aplicaciones Moviles/PRODUCTO/Producto_AplicacionesMoviles/app/src/main/res/layout/fragment_user_auth.xml" value="0.36666666666666664" />
+        <entry key="..\:/Josue/UNS-temp/Z-IX CICLO/Aplicaciones Moviles/PRODUCTO/Producto_AplicacionesMoviles/app/src/main/res/layout/specialty_fragment_item.xml" value="0.36666666666666664" />
+        <entry key="..\:/Josue/UNS-temp/Z-IX CICLO/Aplicaciones Moviles/PRODUCTO/Producto_AplicacionesMoviles/app/src/main/res/layout/specialty_fragment_item_list.xml" value="0.25" />
       </map>
     </option>
   </component>
