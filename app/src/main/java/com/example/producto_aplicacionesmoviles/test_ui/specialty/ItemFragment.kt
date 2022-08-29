@@ -25,10 +25,6 @@ class ItemFragment : Fragment() {
     private var columnCount = 1
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        // Make Dagger instantiate @Inject fields in SpecialtiesActivity
-        //(applicationContext as FirestoreCleanArchitectureApp).appComponent.inject(this)
-        // Now specialtyViewModel is available
-
         super.onCreate(savedInstanceState)
         arguments?.let {
             columnCount = it.getInt(ARG_COLUMN_COUNT)

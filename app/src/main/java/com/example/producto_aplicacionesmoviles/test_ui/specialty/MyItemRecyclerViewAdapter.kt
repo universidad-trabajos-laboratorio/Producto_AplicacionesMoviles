@@ -5,7 +5,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.TextView
 import com.example.producto_aplicacionesmoviles.data.model.Specialty
-import com.example.producto_aplicacionesmoviles.databinding.SpecialtyFragmentItemBinding
+import com.example.producto_aplicacionesmoviles.databinding.TestSpecialtyFragmentItemBinding
 
 
 /**
@@ -19,7 +19,7 @@ class MyItemRecyclerViewAdapter(
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
 
         return ViewHolder(
-            SpecialtyFragmentItemBinding.inflate(
+            TestSpecialtyFragmentItemBinding.inflate(
                 LayoutInflater.from(parent.context),
                 parent,
                 false
@@ -36,7 +36,7 @@ class MyItemRecyclerViewAdapter(
 
     override fun getItemCount(): Int = values.size
 
-    inner class ViewHolder(binding: SpecialtyFragmentItemBinding) :
+    inner class ViewHolder(binding: TestSpecialtyFragmentItemBinding) :
         RecyclerView.ViewHolder(binding.root) {
         val idView: TextView = binding.itemNumber
         val contentView: TextView = binding.content
