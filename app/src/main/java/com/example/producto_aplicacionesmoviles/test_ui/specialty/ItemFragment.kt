@@ -50,17 +50,6 @@ class ItemFragment : Fragment() {
                 }
             }
         })
-
-        // Set the adapter
-        if (view is RecyclerView) {
-            with(view) {
-                layoutManager = when {
-                    columnCount <= 1 -> LinearLayoutManager(context)
-                    else -> GridLayoutManager(context, columnCount)
-                }
-                adapter = MyItemRecyclerViewAdapter(emptyList())
-            }
-        }
         return view
     }
 
