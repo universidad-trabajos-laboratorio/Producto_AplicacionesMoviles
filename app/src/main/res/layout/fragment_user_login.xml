@@ -8,14 +8,15 @@
     android:background="@drawable/bg_gradient_login"
     android:paddingTop="44dp"
     android:paddingBottom="44dp"
-    tools:context=".Fragments.UserLoginFragment">
+    tools:context=".Fragments.Login.UserLoginFragment">
 
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/include"
+        app:layout_constraintBottom_toTopOf="@+id/include_footer_logo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -81,10 +82,10 @@
             <EditText
                 android:id="@+id/inputTextPassword"
                 style="@style/styleInputTextLogin"
-                android:inputType="textPassword"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Digite su password aqui" />
+                android:hint="Digite su password aqui"
+                android:inputType="textPassword" />
 
         </LinearLayout>
 
@@ -102,15 +103,20 @@
     </LinearLayout>
 
 
+
     <include
-        android:id="@+id/include"
+        android:id="@+id/include_footer_logo"
         layout="@layout/footer_logo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toTopOf="@+id/uns"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        android:theme="@style/ThemeIconFooter_Dark"
+        />
+
+
 
     <TextView
         android:id="@+id/uns"

@@ -4,27 +4,38 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AppActivity">
+    tools:context=".AppActivity"
+    android:background="@color/bg_app"
 
-    <TextView
-        android:id="@+id/textView"
-        android:textStyle="bold"
-        android:textColor="#000"
-        android:textSize="20sp"
-        android:layout_width="wrap_content"
+    >
+
+    <fragment
+        android:id="@+id/nav_app_host_fragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:padding="20dp"
+        app:defaultNavHost="true"
+        app:layout_constraintBottom_toTopOf="@+id/botonNavigationApp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:navGraph="@navigation/app_graph" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/botonNavigationApp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="LA APLICACION VA AQUI :3"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:menu="@menu/bottom_nav_menu"
+        android:theme="@style/ThemeIconFooter_Dark"
+        app:labelVisibilityMode="labeled"
+        />
 
-    <Button
-        android:id="@+id/btn_cerrarSesion"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Cerrar sesion"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

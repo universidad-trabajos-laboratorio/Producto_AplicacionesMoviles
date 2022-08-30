@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.producto_aplicacionesmoviles.Fragments.App.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="com.example.producto_aplicacionesmoviles.Fragments.App.AboutFragment"
+        android:label="fragment_about"
+        tools:layout="@layout/fragment_about" />
+    <fragment
+        android:id="@+id/consultaCreateFragment"
+        android:name="com.example.producto_aplicacionesmoviles.Fragments.App.ConsultaCreateFragment"
+        android:label="fragment_consulta_create"
+        tools:layout="@layout/fragment_consulta_create" />
+    <fragment
+        android:id="@+id/consultaDetailDialog"
+        android:name="com.example.producto_aplicacionesmoviles.Fragments.App.ConsultaDetailDialog"
+        android:label="fragment_consulta_detail_dialog"
+        tools:layout="@layout/fragment_consulta_detail_dialog" />
+    <fragment
+        android:id="@+id/consultaHistoryFragment"
+        android:name="com.example.producto_aplicacionesmoviles.Fragments.App.ConsultaHistoryFragment"
+        android:label="fragment_consulta_history"
+        tools:layout="@layout/fragment_consulta_history" />
+    <fragment
+        android:id="@+id/doctorAvailabilityFragment"
+        android:name="com.example.producto_aplicacionesmoviles.Fragments.App.DoctorAvailabilityFragment"
+        android:label="fragment_doctor_availability"
+        tools:layout="@layout/fragment_doctor_availability" />
+    <fragment
+        android:id="@+id/doctorDetailFragment"
+        android:name="com.example.producto_aplicacionesmoviles.Fragments.App.DoctorDetailFragment"
+        android:label="fragment_doctor_detail"
+        tools:layout="@layout/fragment_doctor_detail" />
+    <fragment
+        android:id="@+id/perfilFragment"
+        android:name="com.example.producto_aplicacionesmoviles.Fragments.App.PerfilFragment"
+        android:label="fragment_perfil"
+        tools:layout="@layout/fragment_perfil" />
+    <fragment
+        android:id="@+id/specialtyFragment"
+        android:name="com.example.producto_aplicacionesmoviles.Fragments.App.SpecialtyFragment"
+        android:label="fragment_specialty"
+        tools:layout="@layout/fragment_specialty" />
+    <fragment
+        android:id="@+id/specialtyDoctorsFragment"
+        android:name="com.example.producto_aplicacionesmoviles.Fragments.App.SpecialtyDoctorsFragment"
+        android:label="fragment_specialty_doctors"
+        tools:layout="@layout/fragment_specialty_doctors" />
+</navigation>

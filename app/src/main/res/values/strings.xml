@@ -1,19 +1,50 @@
 <resources>
-    <string name="app_name">Producto_AplicacionesMoviles</string>
-    <!-- TODO: Remove or change this placeholder text -->
+    <!-- Desconocido -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <!-- Comunes -->
+    <string name="app_name">Producto_AplicacionesMoviles</string>
     <string name="uns">@uns</string>
+    <!-- LOGIN -->
     <string name="hospital_nombre">SAN IGNACIO DE CASMA</string>
     <string name="hospital_tipo">Hospital de Apoyo</string>
     <string name="app_titulo">SAN IGNACIO APP</string>
     <string name="app_descripcion">Una aplicacion para la gestión de reservas de consultas médicas</string>
     <string name="title_activity_app">AppActivity</string>
-    <!-- Strings used for fragments for navigation -->
-    <string name="first_fragment_label">First Fragment</string>
-    <string name="second_fragment_label">Second Fragment</string>
-    <string name="next">Next</string>
-    <string name="previous">Previous</string>
 
+    <!-- HOME -->
+    <string name="home_title">¡Bienvenido!</string>
+    <string name="home_description">Aquí encontrara lo necesario para gestionar sus consultas médicas separando su cita con el doctor de su preferencia.</string>
+    <string name="home_section_01">Consultas</string>
+    <string name="home_section_02">Personal</string>
+    <string name="home_section_03">Extra</string>
+
+    <string name="home_card_01_01_title">Crear Consulta</string>
+    <string name="home_card_01_01_description">Crear o administrar consultas</string>
+
+    <string name="home_card_01_02_title">Registro de Consultas</string>
+    <string name="home_card_01_02_description">Listado de consultas anteriores</string>
+
+    <string name="home_card_02_01_title">Doctores</string>
+    <string name="home_card_02_01_description">Vea la lista de doctores y su horario de atencion</string>
+
+    <string name="home_card_03_01_title">Medicamentos</string>
+    <string name="home_card_03_01_description">Crear o administrar consultas</string>
+
+    <string name="home_card_03_02_title">Acerca de</string>
+    <string name="home_card_03_02_description">Informacion sobre el centro de salud</string>
+
+    <!-- _______________ -->
+
+    <!-- SPECIALITY -->
+    <string name="speciality_title">¡Doctores!</string>
+    <string name="speciality_description">Selecciones una especialidad para mostrar los doctores respectivos.</string>
+    <string name="speciality_section_01">Especialidades</string>
+
+    <!-- _______________ -->
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
 </resources>

@@ -1,4 +1,4 @@
-package com.example.producto_aplicacionesmoviles.Fragments
+package com.example.producto_aplicacionesmoviles.Fragments.Login
 
 import android.content.Intent
 import android.os.Bundle
@@ -8,8 +8,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import com.example.producto_aplicacionesmoviles.AppActivity
-import com.example.producto_aplicacionesmoviles.AuthActivity
-import com.example.producto_aplicacionesmoviles.MainActivity
 import com.example.producto_aplicacionesmoviles.databinding.FragmentUserLoginBinding
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase

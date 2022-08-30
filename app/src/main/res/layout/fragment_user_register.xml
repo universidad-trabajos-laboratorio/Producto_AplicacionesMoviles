@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,7 +7,7 @@
     android:background="@drawable/bg_gradient_login"
     android:paddingTop="44dp"
     android:paddingBottom="44dp"
-    tools:context=".Fragments.UserRegisterFragment">
+    tools:context=".Fragments.Login.UserRegisterFragment">
 
 
     <LinearLayout
@@ -16,7 +15,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/include"
+        app:layout_constraintBottom_toTopOf="@+id/include_footer_logo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -85,6 +84,7 @@
                 android:hint="Digite su password aqui" />
 
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -102,8 +102,8 @@
                 style="@style/styleInputTextLogin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="number"
-                android:hint="Digite DNI aqui" />
+                android:hint="Digite DNI aqui"
+                android:inputType="number" />
 
         </LinearLayout>
 
@@ -123,9 +123,9 @@
             <EditText
                 style="@style/styleInputTextLogin"
                 android:layout_width="match_parent"
-                android:inputType="phone"
                 android:layout_height="wrap_content"
-                android:hint="Digite su numero de celular aqui" />
+                android:hint="Digite su numero de celular aqui"
+                android:inputType="phone" />
 
         </LinearLayout>
 
@@ -143,14 +143,16 @@
 
 
     <include
-        android:id="@+id/include"
+        android:id="@+id/include_footer_logo"
         layout="@layout/footer_logo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
+        android:theme="@style/ThemeIconFooter_Dark"
         app:layout_constraintBottom_toTopOf="@+id/uns"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
 
     <TextView
         android:id="@+id/uns"

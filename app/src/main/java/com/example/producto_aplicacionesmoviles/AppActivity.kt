@@ -1,21 +1,38 @@
 package com.example.producto_aplicacionesmoviles
 
-import android.content.Intent
+
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
-import com.google.firebase.auth.ktx.auth
-import com.google.firebase.ktx.Firebase
+import android.view.MenuItem
+
+import androidx.navigation.NavController
+
+import androidx.navigation.findNavController
+import com.example.producto_aplicacionesmoviles.databinding.ActivityAppBinding
 
 class AppActivity : AppCompatActivity() {
+
+
+    private lateinit var navController:NavController
+    private lateinit var binding:ActivityAppBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_app)
-        val btnCerrarSesion:Button = findViewById(R.id.btn_cerrarSesion)
-        btnCerrarSesion.setOnClickListener {
-            Firebase.auth.signOut();
-            startActivity(Intent(this,AuthActivity::class.java))
-            finish()
-        }
+        binding = ActivityAppBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+        navController = findNavController(R.id.nav_app_host_fragment)
+        binding.botonNavigationApp.setOnItemSelectedListener { item->rulesNavigationApp(item) }
+
     }
+
+    private fun rulesNavigationApp(item:MenuItem):Boolean{
+        when(item.itemId){
+            R.id.menu_home->navController.navigate(R.id.homeFragment)
+            R.id.menu_consultas->navController.navigate(R.id.consultaHistoryFragment)
+            R.id.menu_medicos->navController.navigate(R.id.specialtyFragment)
+            R.id.menu_perfil->navController.navigate(R.id.perfilFragment)
+        }
+        return true
+    }
+
 }
