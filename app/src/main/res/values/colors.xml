@@ -9,4 +9,6 @@
     <color name="white">#FFFFFFFF</color>
     <color name="app_celeste">#0187BA</color>
     <color name="app_titulo">#45BCFF</color>
+    <color name="bg_app">#DDEAF6</color>
+    <color name="home_bg_card">#FFFFFF</color>
 </resources>
