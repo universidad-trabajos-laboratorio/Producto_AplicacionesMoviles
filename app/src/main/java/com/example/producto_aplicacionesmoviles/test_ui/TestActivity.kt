@@ -6,6 +6,7 @@ import androidx.activity.viewModels
 import androidx.core.view.isVisible
 import androidx.lifecycle.Observer
 import com.example.producto_aplicacionesmoviles.databinding.ActivityTestBinding
+import com.example.producto_aplicacionesmoviles.viewmodels.SpecialtyViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -20,10 +21,10 @@ class TestActivity : AppCompatActivity() {
         binding = ActivityTestBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        specialtyViewModel.specialtyModel.observe(this, Observer { currentSpecialty ->
-            binding.tvQuote.text = currentSpecialty.name
-            binding.tvAuthor.text = currentSpecialty.id
-        })
+//        specialtyViewModel.specialtyModel.observe(this, Observer { currentSpecialty ->
+//            binding.tvQuote.text = currentSpecialty.name
+//            binding.tvAuthor.text = currentSpecialty.id
+//        })
 
         specialtyViewModel.isLoading.observe(this, Observer {
             binding.loading.isVisible = it

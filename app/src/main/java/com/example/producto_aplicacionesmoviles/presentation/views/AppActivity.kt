@@ -1,4 +1,4 @@
-package com.example.producto_aplicacionesmoviles
+package com.example.producto_aplicacionesmoviles.presentation.views
 
 
 import androidx.appcompat.app.AppCompatActivity
@@ -8,8 +8,11 @@ import android.view.MenuItem
 import androidx.navigation.NavController
 
 import androidx.navigation.findNavController
+import com.example.producto_aplicacionesmoviles.R
 import com.example.producto_aplicacionesmoviles.databinding.ActivityAppBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint()
 class AppActivity : AppCompatActivity() {
 
 
@@ -27,10 +30,10 @@ class AppActivity : AppCompatActivity() {
 
     private fun rulesNavigationApp(item:MenuItem):Boolean{
         when(item.itemId){
-            R.id.menu_home->navController.navigate(R.id.homeFragment)
-            R.id.menu_consultas->navController.navigate(R.id.consultaHistoryFragment)
-            R.id.menu_medicos->navController.navigate(R.id.specialtyFragment)
-            R.id.menu_perfil->navController.navigate(R.id.perfilFragment)
+            R.id.menu_home ->navController.navigate(R.id.homeFragment)
+            R.id.menu_consultas ->navController.navigate(R.id.consultaHistoryFragment)
+            R.id.menu_medicos ->navController.navigate(R.id.specialtyFragment)
+            R.id.menu_perfil ->navController.navigate(R.id.perfilFragment)
         }
         return true
     }

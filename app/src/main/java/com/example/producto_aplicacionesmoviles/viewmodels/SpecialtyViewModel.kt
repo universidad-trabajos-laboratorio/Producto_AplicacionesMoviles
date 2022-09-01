@@ -1,4 +1,4 @@
-package com.example.producto_aplicacionesmoviles.test_ui
+package com.example.producto_aplicacionesmoviles.viewmodels
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -14,8 +14,7 @@ import javax.inject.Inject
 @HiltViewModel
 class SpecialtyViewModel @Inject constructor(
     private val useCases: SpecialtyUseCases
-) : ViewModel(){
-    val specialtyModel = MutableLiveData<Specialty>()
+) : ViewModel() {
     val specialtiesResponse = MutableLiveData<List<Specialty>>()
     val isLoading = MutableLiveData<Boolean>()
 
@@ -25,24 +24,24 @@ class SpecialtyViewModel @Inject constructor(
 
     fun getSpecialties() = viewModelScope.launch {
         var result: List<Specialty>? = emptyList()
+        isLoading.postValue(true)
         useCases.getSpecialty().collect { response ->
-            when(response) {
-                is Response.Loading -> Utils.printMessage("CARGANDO")
+            when (response) {
+               // is Response.Loading -> isLoading.postValue(true)
                 is Response.Success -> {
                     result = response.data
                 }
                 is Response.Error -> Utils.printMessage(response.message)
             }
 
-            if (!result.isNullOrEmpty()){
+            if (!result.isNullOrEmpty()) {
                 specialtiesResponse.postValue(result!!)
-                specialtyModel.postValue(result!![1])
                 isLoading.postValue(false)
             }
         }
     }
 
-    fun randomSpecialty(){
+    fun randomSpecialty() {
         //val currentSpecialty = SpecialtyProvider.random()
         //specialtyModel.postValue(currentSpecialty)
     }

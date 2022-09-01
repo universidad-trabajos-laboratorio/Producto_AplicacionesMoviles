@@ -1,4 +1,4 @@
-package com.example.producto_aplicacionesmoviles
+package com.example.producto_aplicacionesmoviles.presentation.views
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity

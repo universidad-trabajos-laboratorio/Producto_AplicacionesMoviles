@@ -7,7 +7,7 @@
     android:background="@drawable/bg_gradient_login"
     android:paddingTop="44dp"
     android:paddingBottom="44dp"
-    tools:context=".Fragments.Login.UserRegisterFragment">
+    tools:context=".presentation.views.login.UserRegisterFragment">
 
 
     <LinearLayout

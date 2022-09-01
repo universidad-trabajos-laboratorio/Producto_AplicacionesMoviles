@@ -10,6 +10,24 @@
         <entry key="..\:/ANDROID/Proyectos/Producto_AplicacionesMoviles/app/src/main/res/drawable/ic_logoapp.xml" value="0.124" />
         <entry key="..\:/ANDROID/Proyectos/Producto_AplicacionesMoviles/app/src/main/res/drawable/logo_splash.xml" value="0.123" />
         <entry key="..\:/ANDROID/Proyectos/Producto_AplicacionesMoviles/app/src/main/res/drawable/splash_background.xml" value="0.2" />
+        <entry key="..\:/ANDROID/Proyectos/Producto_AplicacionesMoviles/app/src/main/res/layout/activity_auth.xml" value="0.1537037037037037" />
+        <entry key="..\:/ANDROID/Proyectos/Producto_AplicacionesMoviles/app/src/main/res/layout/activity_specialties_test.xml" value="0.19739583333333333" />
+        <entry key="..\:/ANDROID/Proyectos/Producto_AplicacionesMoviles/app/src/main/res/layout/activity_test.xml" value="0.19739583333333333" />
+        <entry key="..\:/ANDROID/Proyectos/Producto_AplicacionesMoviles/app/src/main/res/layout/footer_logo.xml" value="0.1537037037037037" />
+        <entry key="..\:/ANDROID/Proyectos/Producto_AplicacionesMoviles/app/src/main/res/layout/fragment_about.xml" value="0.19739583333333333" />
+        <entry key="..\:/ANDROID/Proyectos/Producto_AplicacionesMoviles/app/src/main/res/layout/fragment_consulta_create.xml" value="0.19739583333333333" />
+        <entry key="..\:/ANDROID/Proyectos/Producto_AplicacionesMoviles/app/src/main/res/layout/fragment_consulta_detail_dialog.xml" value="0.19739583333333333" />
+        <entry key="..\:/ANDROID/Proyectos/Producto_AplicacionesMoviles/app/src/main/res/layout/fragment_consulta_history.xml" value="0.19739583333333333" />
+        <entry key="..\:/ANDROID/Proyectos/Producto_AplicacionesMoviles/app/src/main/res/layout/fragment_doctor_availability.xml" value="0.19739583333333333" />
+        <entry key="..\:/ANDROID/Proyectos/Producto_AplicacionesMoviles/app/src/main/res/layout/fragment_doctor_detail.xml" value="0.19739583333333333" />
+        <entry key="..\:/ANDROID/Proyectos/Producto_AplicacionesMoviles/app/src/main/res/layout/fragment_specialty.xml" value="0.264" />
+        <entry key="..\:/ANDROID/Proyectos/Producto_AplicacionesMoviles/app/src/main/res/layout/fragment_user_auth.xml" value="0.19739583333333333" />
+        <entry key="..\:/ANDROID/Proyectos/Producto_AplicacionesMoviles/app/src/main/res/layout/fragment_user_login.xml" value="0.19739583333333333" />
+        <entry key="..\:/ANDROID/Proyectos/Producto_AplicacionesMoviles/app/src/main/res/layout/fragment_user_register.xml" value="0.19739583333333333" />
+        <entry key="..\:/ANDROID/Proyectos/Producto_AplicacionesMoviles/app/src/main/res/layout/item_especialty.xml" value="0.264" />
+        <entry key="..\:/ANDROID/Proyectos/Producto_AplicacionesMoviles/app/src/main/res/layout/test_specialty_fragment_item.xml" value="0.19739583333333333" />
+        <entry key="..\:/ANDROID/Proyectos/Producto_AplicacionesMoviles/app/src/main/res/layout/test_specialty_fragment_item_list.xml" value="0.19739583333333333" />
+        <entry key="..\:/ANDROID/Proyectos/Producto_AplicacionesMoviles/app/src/main/res/menu/bottom_nav_menu.xml" value="0.14635416666666667" />
       </map>
     </option>
   </component>
