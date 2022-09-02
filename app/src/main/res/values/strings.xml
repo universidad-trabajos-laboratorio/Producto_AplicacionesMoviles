@@ -44,7 +44,21 @@
     <string name="speciality_description">Selecciones una especialidad para mostrar los doctores respectivos.</string>
     <string name="speciality_section_01">Especialidades</string>
 
+
     <!-- _______________ -->
+    <string name="lorem">Lorem ipsum es el texto que se usa habitualmente en diseño gráfico en demostraciones de tipografías o de borradores de diseño para probar el diseño visual antes de insertar el texto final. Wikipedia
+</string>
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="text_ver_mas">ver mas</string>
+    <string name="label_nombreCompleto">Nombre Completo</string>
+    <string name="label_tiempoLaborando">Tiempo Laborando</string>
+    <string name="label_grado">Grado</string>
+    <string name="label_estudios">Estudios</string>
+    <string name="label_descripcion">Descripcion</string>
+    <string name="label_horarios_de_atencion">Horarios de Atencion</string>
+    <string name="label_recervar_cita">Recervar Cita</string>
+    <string name="About_title">Acerca del Hospital</string>
+    <string name="label_Ubicacion">Ubicacion</string>
+    <string name="direccionHospital">AV. GARCILAZO DE LA VEGA NRO. 658 CASCO URBANO ANCASH - CASMA - CASMA</string>
 </resources>

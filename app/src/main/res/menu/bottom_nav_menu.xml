@@ -2,24 +2,24 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/menu_home"
+        android:id="@+id/homeFragment"
         android:title="Home"
-        android:icon="@drawable/ic_icon_hospital"
+        android:icon="@drawable/home_selector"
         />
     <item
-        android:id="@+id/menu_consultas"
+        android:id="@+id/consultaHistoryFragment"
         android:title="Consultas"
-        android:icon="@drawable/ic_icon_libreta"
+        android:icon="@drawable/consultas_selector"
         />
     <item
-        android:id="@+id/menu_medicos"
+        android:id="@+id/specialtyFragment"
         android:title="Medicos"
-        android:icon="@drawable/ic_icon_estetoscopio"
+        android:icon="@drawable/estetoscopio_selector"
         />
     <item
-        android:id="@+id/menu_perfil"
+        android:id="@+id/perfilFragment"
         android:title="Perfil"
-        android:icon="@drawable/ic_icon_perfil"
+        android:icon="@drawable/perfil_selector"
         />
 
 </menu>

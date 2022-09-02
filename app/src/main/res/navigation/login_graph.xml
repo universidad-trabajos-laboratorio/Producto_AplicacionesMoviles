@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/userAuthFragment"
-        android:name="com.example.producto_aplicacionesmoviles.Fragments.Login.UserAuthFragment"
+        android:name="com.example.producto_aplicacionesmoviles.presentation.views.login.UserAuthFragment"
         android:label="fragment_user_auth"
         tools:layout="@layout/fragment_user_auth" >
         <action
@@ -19,12 +19,12 @@
     </fragment>
     <fragment
         android:id="@+id/userLoginFragment"
-        android:name="com.example.producto_aplicacionesmoviles.Fragments.Login.UserLoginFragment"
+        android:name="com.example.producto_aplicacionesmoviles.presentation.views.login.UserLoginFragment"
         android:label="fragment_user_login"
         tools:layout="@layout/fragment_user_login" />
     <fragment
         android:id="@+id/userRegisterFragment"
-        android:name="com.example.producto_aplicacionesmoviles.Fragments.Login.UserRegisterFragment"
+        android:name="com.example.producto_aplicacionesmoviles.presentation.views.login.UserRegisterFragment"
         android:label="fragment_user_register"
         tools:layout="@layout/fragment_user_register" />
 </navigation>

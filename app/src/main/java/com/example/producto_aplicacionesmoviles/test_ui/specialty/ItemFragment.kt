@@ -11,7 +11,6 @@ import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import com.example.producto_aplicacionesmoviles.R
-import com.example.producto_aplicacionesmoviles.test_ui.SpecialtyViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
 /**

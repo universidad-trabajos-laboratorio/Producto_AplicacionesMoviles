@@ -1,14 +1,253 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Fragments.App.DoctorDetailFragment">
+    android:background="@color/bg_app"
+    tools:context=".presentation.views.specialty.DoctorDetailFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
 
-</FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/iv_DoctorDetailLogo"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="8dp"
+                android:importantForAccessibility="no"
+                android:scaleType="centerCrop"
+                tools:srcCompat="@drawable/ic_icon_pastilla" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_SpecialtyDoctorTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#252525"
+                    android:textSize="32sp"
+                    tools:text="Dr Melio Diaz" />
+
+                <TextView
+                    android:id="@+id/tv_DoctorDetailState"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="8dp"
+                    android:textColor="#5E5E5E"
+                    android:textSize="12sp"
+                    app:drawableStartCompat="@drawable/circle"
+                    app:drawableTint="#00DD16"
+                    app:layout_constraintStart_toStartOf="@id/tv_name"
+                    app:layout_constraintTop_toBottomOf="@id/tv_name"
+                    tools:text="Disponible" />
+
+                <TextView
+                    android:id="@+id/tv_DoctorDetailSubTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#515151"
+                    android:textSize="16sp"
+                    tools:text="Personal calificado en cardeologia" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp">
+
+            <TextView
+                android:id="@+id/label_nombreCompleto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_nombreCompleto"
+                android:textColor="#5C5C5C"
+                android:textSize="14sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_doctorDetailFullName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textColor="#242424"
+                android:textSize="16sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/iv_DoctorDetailLogo"
+                app:layout_constraintTop_toBottomOf="@id/label_nombreCompleto"
+                tools:text="Melio Josue Diaz Diaz" />
+
+            <TextView
+                android:id="@+id/label_tiempoLaborando"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_tiempoLaborando"
+                android:textColor="#5C5C5C"
+                android:textSize="14sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_doctorDetailFullName" />
+
+            <TextView
+                android:id="@+id/tv_doctorDetailWorkingTime"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textColor="#242424"
+                android:textSize="16sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/iv_DoctorDetailLogo"
+                app:layout_constraintTop_toBottomOf="@id/label_tiempoLaborando"
+                tools:text="4 dias" />
+
+
+            <TextView
+                android:id="@+id/label_grado"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_grado"
+                android:textColor="#5C5C5C"
+                android:textSize="14sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_doctorDetailWorkingTime" />
+
+            <TextView
+                android:id="@+id/tv_doctorDetailGrade"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textColor="#242424"
+                android:textSize="16sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/iv_DoctorDetailLogo"
+                app:layout_constraintTop_toBottomOf="@id/label_grado"
+                tools:text="Dr en meta infartos" />
+
+
+            <TextView
+                android:id="@+id/label_studies"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_estudios"
+                android:textColor="#5C5C5C"
+                android:textSize="14sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_doctorDetailGrade" />
+
+            <TextView
+                android:id="@+id/tv_doctorDetailStudies"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textColor="#242424"
+                android:textSize="16sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/iv_DoctorDetailLogo"
+                app:layout_constraintTop_toBottomOf="@id/label_studies"
+                tools:text="UNS" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@id/iv_DoctorDetailLogo"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:shapeAppearanceOverlay="@style/Circular"
+                tools:ignore="ImageContrastCheck"
+
+                tools:srcCompat="@tools:sample/avatars" />
+
+
+            <TextView
+                android:layout_marginTop="16dp"
+                android:id="@+id/label_descripcion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_descripcion"
+                android:textColor="#5C5C5C"
+                android:textSize="14sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/iv_DoctorDetailLogo" />
+
+            <TextView
+
+                android:id="@+id/tv_doctorDetailDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#242424"
+                android:textSize="16sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/label_descripcion"
+                tools:text="@string/lorem" />
+
+            <TextView
+                android:layout_marginTop="16dp"
+                android:id="@+id/label_horariosDeAtencion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_horarios_de_atencion"
+                android:textColor="#5C5C5C"
+                android:textSize="14sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_doctorDetailDescription" />
+
+            <ListView
+                android:id="@+id/lv_doctorDetailOfficeHours"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#242424"
+                android:textSize="16sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/label_horariosDeAtencion"
+                tools:ignore="NestedScrolling" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <Button
+            android:id="@+id/btn_RecervarCita"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginHorizontal="60dp"
+            android:layout_marginVertical="40dp"
+            android:backgroundTint="#0CA34F"
+            android:padding="16dp"
+            android:text="@string/label_recervar_cita"
+            android:textAllCaps="false"
+            android:textSize="16sp"
+            app:cornerRadius="12dp"
+            tools:ignore="TextContrastCheck" />
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="40dp"
+            android:theme="@style/ThemeIconFooter_Light">
+
+            <include
+                android:id="@+id/include_footer_logo"
+                layout="@layout/footer_logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </FrameLayout>
+    </LinearLayout>
+
+</ScrollView>

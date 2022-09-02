@@ -5,12 +5,84 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/bg_app"
-    tools:context=".Fragments.App.SpecialtyDoctorsFragment">
-<TextView
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    app:layout_constraintTop_toTopOf="parent"
-    app:layout_constraintLeft_toLeftOf="parent"
-    android:text="Hello"/>
+    tools:context=".presentation.views.specialty.SpecialtyDoctorsFragment">
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            >
+
+            <ImageView
+                android:id="@+id/iv_SpecialtyDoctorLogo"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="8dp"
+                android:importantForAccessibility="no"
+                android:scaleType="centerCrop"
+                tools:srcCompat="@drawable/ic_icon_pastilla" />
+
+            <TextView
+                android:id="@+id/tv_SpecialtyDoctorTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="20dp"
+                tools:text="¡Cardiólogos!"
+                android:textColor="#252525"
+                android:textSize="32sp" />
+        </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/tv_SpecialtyDoctorDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="Personal calificado en cardeologia"
+                android:textColor="#515151"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_SpecialtyDoctorNameSecction"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="15dp"
+                tools:text="Listado de Cardiólogos"
+                android:textColor="#363636"
+                android:textSize="16sp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvSpecialtyDoctors"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+
+
+        </LinearLayout>
+
+    </ScrollView>
+    <ProgressBar
+        android:id="@+id/progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

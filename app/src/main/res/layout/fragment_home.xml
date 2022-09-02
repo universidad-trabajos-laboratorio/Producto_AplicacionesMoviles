@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/bg_app"
-    tools:context=".Fragments.App.HomeFragment">
+    tools:context=".presentation.views.home.HomeFragment">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -61,7 +61,8 @@
                     app:cardBackgroundColor="@color/home_bg_card"
                     app:cardCornerRadius="11dp"
                     app:contentPadding="20dp"
-
+                    android:foreground="?attr/selectableItemBackground"
+                    android:clickable="true"
                     >
 
                     <LinearLayout
@@ -120,7 +121,8 @@
                     app:cardBackgroundColor="@color/home_bg_card"
                     app:cardCornerRadius="11dp"
                     app:contentPadding="20dp"
-
+                    android:foreground="?attr/selectableItemBackground"
+                    android:clickable="true"
 
                     >
 
@@ -140,9 +142,9 @@
                             app:contentPadding="7dp">
 
                             <ImageView
-                                android:importantForAccessibility="no"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
+                                android:importantForAccessibility="no"
                                 android:src="@drawable/ic_icon_libreta" />
 
                         </androidx.cardview.widget.CardView>
@@ -160,8 +162,7 @@
                             android:layout_height="wrap_content"
                             android:text="@string/home_card_01_02_description"
                             android:textColor="#353535"
-                            android:textSize="16sp"
-                            />
+                            android:textSize="16sp" />
 
 
                     </LinearLayout>
@@ -194,7 +195,8 @@
                     app:cardBackgroundColor="@color/home_bg_card"
                     app:cardCornerRadius="11dp"
                     app:contentPadding="20dp"
-
+                    android:foreground="?attr/selectableItemBackground"
+                    android:clickable="true"
                     >
 
                     <LinearLayout
@@ -213,9 +215,9 @@
                             app:contentPadding="7dp">
 
                             <ImageView
-                                android:importantForAccessibility="no"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
+                                android:importantForAccessibility="no"
                                 android:src="@drawable/ic_icon_estetoscopio" />
 
                         </androidx.cardview.widget.CardView>
@@ -272,7 +274,8 @@
                     app:cardBackgroundColor="@color/home_bg_card"
                     app:cardCornerRadius="11dp"
                     app:contentPadding="20dp"
-
+                    android:foreground="?attr/selectableItemBackground"
+                    android:clickable="true"
                     >
 
                     <LinearLayout
@@ -291,9 +294,9 @@
                             app:contentPadding="7dp">
 
                             <ImageView
-                                android:importantForAccessibility="no"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
+                                android:importantForAccessibility="no"
                                 android:src="@drawable/ic_icon_pastilla" />
 
                         </androidx.cardview.widget.CardView>
@@ -324,6 +327,7 @@
                     android:layout_height="0dp" />
 
                 <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/card_AboutHospital"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -331,6 +335,8 @@
                     app:cardBackgroundColor="@color/home_bg_card"
                     app:cardCornerRadius="11dp"
                     app:contentPadding="20dp"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:clickable="true"
 
 
                     >
@@ -351,9 +357,9 @@
                             app:contentPadding="7dp">
 
                             <ImageView
-                                android:importantForAccessibility="no"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
+                                android:importantForAccessibility="no"
                                 android:src="@drawable/ic_icon_hospital_2" />
 
                         </androidx.cardview.widget.CardView>
@@ -379,21 +385,22 @@
 
                 </com.google.android.material.card.MaterialCardView>
             </LinearLayout>
-<FrameLayout
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_gravity="center_horizontal"
-    android:layout_marginTop="40dp"
-    android:layout_marginBottom="40dp"
-    android:theme="@style/ThemeIconFooter_Light">
-    <include
-        android:id="@+id/include_footer_logo"
-        layout="@layout/footer_logo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        />
 
-</FrameLayout>
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="40dp"
+                android:theme="@style/ThemeIconFooter_Light">
+
+                <include
+                    android:id="@+id/include_footer_logo"
+                    layout="@layout/footer_logo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </FrameLayout>
 
         </LinearLayout>
 

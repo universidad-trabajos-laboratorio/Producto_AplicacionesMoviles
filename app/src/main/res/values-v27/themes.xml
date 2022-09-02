@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="StylesApp" parent="Theme.Producto_AplicacionesMoviles">
+        <item name="android:statusBarColor" >@color/bg_app</item>
+        <item name="android:windowLightStatusBar" >true</item>
+        <item name="android:windowLightNavigationBar">true</item>
+        <item name="android:navigationBarColor">#EDEDED</item>
+    </style>
+</resources>
