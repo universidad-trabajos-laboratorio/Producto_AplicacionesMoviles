@@ -7,6 +7,7 @@ class AddSpecialty(
 ) {
     operator fun invoke(
         name: String,
-        icon: String
-    ) = repo.addSpecialtyToFirestore(name, icon)
+        icon: String,
+        active : Boolean
+    ) = repo.addSpecialtyToFirestore(name, icon, active)
 }

@@ -14,7 +14,7 @@ import javax.inject.Inject
 @HiltViewModel
 class SpecialtyViewModel @Inject constructor(
     private val useCases: SpecialtyUseCases
-) : ViewModel() {
+) : ViewModel(){
     val specialtiesResponse = MutableLiveData<List<Specialty>>()
     val isLoading = MutableLiveData<Boolean>()
 
@@ -22,7 +22,7 @@ class SpecialtyViewModel @Inject constructor(
         getSpecialties()
     }
 
-    fun getSpecialties() = viewModelScope.launch {
+    private fun getSpecialties() = viewModelScope.launch {
         var result: List<Specialty>? = emptyList()
         isLoading.postValue(true)
         useCases.getSpecialty().collect { response ->
@@ -40,6 +40,11 @@ class SpecialtyViewModel @Inject constructor(
             }
         }
     }
+
+    fun addSpeciality(name: String, icon: String, active: Boolean) = viewModelScope.launch {
+        useCases.addSpecialty(name, icon, active).collect { }
+    }
+
 
     fun randomSpecialty() {
         //val currentSpecialty = SpecialtyProvider.random()
