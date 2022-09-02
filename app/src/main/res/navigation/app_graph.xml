@@ -58,5 +58,10 @@
         android:id="@+id/specialtyDoctorsFragment"
         android:name="com.example.producto_aplicacionesmoviles.presentation.views.specialty.SpecialtyDoctorsFragment"
         android:label="fragment_specialty_doctors"
-        tools:layout="@layout/fragment_specialty_doctors" />
+        tools:layout="@layout/fragment_specialty_doctors" >
+        <argument
+            android:name="id"
+            app:argType="string"
+            android:defaultValue="0" />
+    </fragment>
 </navigation>

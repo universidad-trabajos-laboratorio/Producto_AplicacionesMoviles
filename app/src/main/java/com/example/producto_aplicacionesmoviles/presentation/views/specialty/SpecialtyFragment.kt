@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.os.bundleOf
 import androidx.core.view.isVisible
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
@@ -14,7 +15,7 @@ import com.example.producto_aplicacionesmoviles.R
 import com.example.producto_aplicacionesmoviles.databinding.FragmentSpecialtyBinding
 
 import com.example.producto_aplicacionesmoviles.presentation.adapters.SpecialtyAdapter
-import com.example.producto_aplicacionesmoviles.test_ui.specialty.SpecialtyViewModel
+import com.example.producto_aplicacionesmoviles.viewmodels.SpecialtyViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint()
@@ -48,7 +49,8 @@ class SpecialtyFragment : Fragment() {
     }
 
     private fun openDoctors(specialtyId: String) {
-        findNavController().navigate(R.id.action_specialtyFragment_to_specialtyDoctorsFragment)
+        val action = SpecialtyFragmentDirections.actionSpecialtyFragmentToSpecialtyDoctorsFragment(specialtyId)
+        findNavController().navigate(action)
     }
 
 

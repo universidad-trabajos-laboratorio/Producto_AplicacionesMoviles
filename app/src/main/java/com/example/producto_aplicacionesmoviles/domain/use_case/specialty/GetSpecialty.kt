@@ -1,4 +1,4 @@
-package com.example.producto_aplicacionesmoviles.domain.use_case
+package com.example.producto_aplicacionesmoviles.domain.use_case.specialty
 
 import com.example.producto_aplicacionesmoviles.domain.repository.SpecialtiesRepository
 

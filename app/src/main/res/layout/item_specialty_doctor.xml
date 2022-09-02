@@ -15,8 +15,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:shapeAppearanceOverlay="@style/Circular"
         tools:ignore="ImageContrastCheck"
-        tools:srcCompat="@tools:sample/avatars" />
-
+        app:srcCompat="@drawable/icon_perfil_selected" />
     <TextView
         android:id="@+id/tv_name"
         android:layout_width="wrap_content"
@@ -37,6 +36,7 @@
         android:textSize="12sp"
         app:drawableStartCompat="@drawable/circle"
         app:drawableTint="#00DD16"
+
         app:layout_constraintStart_toStartOf="@id/tv_name"
         app:layout_constraintTop_toBottomOf="@id/tv_name"
         tools:text="Disponible" />

@@ -7,9 +7,9 @@ import com.example.producto_aplicacionesmoviles.R
 import com.example.producto_aplicacionesmoviles.data.model.Specialty
 import com.example.producto_aplicacionesmoviles.data.model.SpecialtyDoctor
 import com.example.producto_aplicacionesmoviles.data.model.User
-import com.example.producto_aplicacionesmoviles.test_ui.SpecialtyDoctorsViewModel
-import com.example.producto_aplicacionesmoviles.test_ui.SpecialtyViewModel
-import com.example.producto_aplicacionesmoviles.test_ui.UsersViewModel
+import com.example.producto_aplicacionesmoviles.viewmodels.SpecialtyDoctorsViewModel
+import com.example.producto_aplicacionesmoviles.viewmodels.SpecialtyViewModel
+import com.example.producto_aplicacionesmoviles.viewmodels.UsersViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import java.util.*
 

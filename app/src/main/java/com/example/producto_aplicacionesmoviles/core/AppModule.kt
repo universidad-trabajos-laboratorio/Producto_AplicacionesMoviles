@@ -10,6 +10,9 @@ import com.example.producto_aplicacionesmoviles.domain.repository.SpecialtiesRep
 import com.example.producto_aplicacionesmoviles.domain.repository.SpecialtyDoctorsRepository
 import com.example.producto_aplicacionesmoviles.domain.repository.UsersRepository
 import com.example.producto_aplicacionesmoviles.domain.use_case.*
+import com.example.producto_aplicacionesmoviles.domain.use_case.specialty.AddSpecialty
+import com.example.producto_aplicacionesmoviles.domain.use_case.specialty.DeleteSpecialty
+import com.example.producto_aplicacionesmoviles.domain.use_case.specialty.GetSpecialty
 import com.example.producto_aplicacionesmoviles.domain.use_case.specialtydoctors.AddSpecialtyDoctor
 import com.example.producto_aplicacionesmoviles.domain.use_case.specialtydoctors.DeleteSpecialtyDoctor
 import com.example.producto_aplicacionesmoviles.domain.use_case.specialtydoctors.GetSpecialtyDoctors
