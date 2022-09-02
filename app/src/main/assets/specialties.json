@@ -1,0 +1,18 @@
+[
+  {
+    "name": "Pediatría",
+    "icon": "path/to/icon"
+  },
+  {
+    "name": "Ginecología",
+    "icon": "path/to/icon"
+  },
+  {
+    "name": "Medicina General",
+    "icon": "path/to/icon"
+  },
+  {
+    "name": "Neumología",
+    "icon": "path/to/icon"
+  }
+]

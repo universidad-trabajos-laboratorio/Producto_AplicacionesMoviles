@@ -1,0 +1,41 @@
+[
+  {
+    "authentication_id" : "wFmcecyvRPUUMIfroXEb5FYtQKw1",
+    "email" : "allontopmeza@gmail.com",
+    "name" : "Abel Llontop Meza",
+    "gender": "Masculine",
+    "document_type" : "DNI",
+    "document_number" : "00000000",
+    "rol" : "doctor",
+    "profile_img" : "path/to/default.jpg",
+    "created_at" : "",
+    "last_login_date" : "",
+    "active" : "true"
+  },
+  {
+    "authentication_id" : "EXj8oAU7v6R4rvArcwJo6nctres1",
+    "email" : "melodiaz2111@gmail.com",
+    "name" : "Melio Diaz Diaz",
+    "gender": "Masculine",
+    "document_type" : "DNI",
+    "document_number" : "00000000",
+    "rol" : "doctor",
+    "profile_img" : "path/to/default.jpg",
+    "created_at" : "",
+    "last_login_date" : "",
+    "active" : "true"
+  },
+  {
+    "authentication_id" : "p4FpjbavXEdxq0ZioTjwajNmVu12",
+    "email" : "enfermoncia@gmail.com",
+    "name" : "Enfermoncia Salinas de la Cruz",
+    "gender": "Feminine",
+    "document_type" : "DNI",
+    "document_number" : "00000000",
+    "rol" : "patient",
+    "profile_img" : "path/to/default.jpg",
+    "created_at" : "",
+    "last_login_date" : "",
+    "active" : "true"
+  }
+]

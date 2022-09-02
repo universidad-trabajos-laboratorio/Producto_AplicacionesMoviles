@@ -1,8 +1,8 @@
 package com.example.producto_aplicacionesmoviles.test_ui
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.activity.viewModels
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
 import androidx.lifecycle.Observer
 import com.example.producto_aplicacionesmoviles.databinding.ActivityTestBinding
@@ -19,11 +19,11 @@ class TestActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityTestBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
+/*
         specialtyViewModel.specialtyModel.observe(this, Observer { currentSpecialty ->
             binding.tvQuote.text = currentSpecialty.name
             binding.tvAuthor.text = currentSpecialty.id
-        })
+        })*/
 
         specialtyViewModel.isLoading.observe(this, Observer {
             binding.loading.isVisible = it

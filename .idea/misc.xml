@@ -10,6 +10,12 @@
         <entry key="..\:/ANDROID/Proyectos/Producto_AplicacionesMoviles/app/src/main/res/drawable/ic_logoapp.xml" value="0.124" />
         <entry key="..\:/ANDROID/Proyectos/Producto_AplicacionesMoviles/app/src/main/res/drawable/logo_splash.xml" value="0.123" />
         <entry key="..\:/ANDROID/Proyectos/Producto_AplicacionesMoviles/app/src/main/res/drawable/splash_background.xml" value="0.2" />
+        <entry key="..\:/Josue/UNS-temp/Z-IX CICLO/Aplicaciones Moviles/PRODUCTO/Producto_AplicacionesMoviles/app/src/main/res/layout/activity_app.xml" value="0.36666666666666664" />
+        <entry key="..\:/Josue/UNS-temp/Z-IX CICLO/Aplicaciones Moviles/PRODUCTO/Producto_AplicacionesMoviles/app/src/main/res/layout/activity_auth.xml" value="0.36666666666666664" />
+        <entry key="..\:/Josue/UNS-temp/Z-IX CICLO/Aplicaciones Moviles/PRODUCTO/Producto_AplicacionesMoviles/app/src/main/res/layout/activity_specialties_test.xml" value="0.36666666666666664" />
+        <entry key="..\:/Josue/UNS-temp/Z-IX CICLO/Aplicaciones Moviles/PRODUCTO/Producto_AplicacionesMoviles/app/src/main/res/layout/fragment_home.xml" value="0.36666666666666664" />
+        <entry key="..\:/Josue/UNS-temp/Z-IX CICLO/Aplicaciones Moviles/PRODUCTO/Producto_AplicacionesMoviles/app/src/main/res/layout/fragment_user_login.xml" value="0.36666666666666664" />
+        <entry key="..\:/Josue/UNS-temp/Z-IX CICLO/Aplicaciones Moviles/PRODUCTO/Producto_AplicacionesMoviles/app/src/main/res/layout/fragment_user_register.xml" value="0.36666666666666664" />
       </map>
     </option>
   </component>

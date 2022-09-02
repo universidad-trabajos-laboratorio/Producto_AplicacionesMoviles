@@ -17,7 +17,10 @@ class SpecialtiesRepositoryImpl @Inject constructor(
     private val specialtiesRef: CollectionReference
 ): SpecialtiesRepository {
     override fun getSpecialtiesFromFirestore() = callbackFlow {
-        val snapshotListener = specialtiesRef.orderBy(Constants.NAME_SPECIALTY).addSnapshotListener { snapshot, e ->
+        val snapshotListener = specialtiesRef.orderBy(Constants.SPECIALTY_ACTIVE_FIELD)
+            .orderBy(Constants.SPECIALTY_NAME_FIELD)
+            .whereNotEqualTo(Constants.SPECIALTY_ACTIVE_FIELD, false)
+            .addSnapshotListener { snapshot, e ->
             val response = if (snapshot != null) {
                 val specialities = snapshot.toObjects(Specialty::class.java)
                 Response.Success(specialities)
@@ -31,14 +34,15 @@ class SpecialtiesRepositoryImpl @Inject constructor(
         }
     }
 
-    override fun addSpecialtyToFirestore(name: String, icon: String) = flow {
+    override fun addSpecialtyToFirestore(name: String, icon: String, active: Boolean) = flow {
         try {
             emit( Response.Loading )
             val id = specialtiesRef.document().id
             val specialty = Specialty(
                 id = id,
                 name = name,
-                icon = icon
+                icon = icon,
+                active = active
             )
             val addition = specialtiesRef.document(id).set(specialty).await()
             emit( Response.Success(addition) )
@@ -50,7 +54,7 @@ class SpecialtiesRepositoryImpl @Inject constructor(
     override fun deleteSpecialtyFromFirestore(specialtyId: String) = flow {
         try {
             emit( Response.Loading )
-            val deletion = specialtiesRef.document(specialtyId).delete().await()
+            val deletion = specialtiesRef.document(specialtyId).update("active", false).await()
             emit( Response.Success(deletion) )
         } catch (e: Exception) {
             emit( Response.Error(e.message ?: e.toString()) )

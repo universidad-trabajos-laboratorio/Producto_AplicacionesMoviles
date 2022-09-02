@@ -5,19 +5,16 @@ object Constants {
     const val TAG = "AppTag"
 
     //Firestore
-    const val SPECIALTY = "specialties"
-    const val NAME_SPECIALTY = "name"
+    const val SPECIALTY_COLLECTION_NAME = "specialties"
+    const val SPECIALTY_NAME_FIELD = "name"
+    const val SPECIALTY_ACTIVE_FIELD = "active"
 
-    //Actions
-    const val ADD_SPECIALTY = "Add a Specialty."
-    const val DELETE_SPECIALTY = "Delete a Speciatly."
+    const val SPECIALTY_DOCTOR_COLLECTION_NAME = "specialty_doctors"
+    const val SPECIALTY_DOCTOR_SPECIALTY_ID_FIELD = "specialty_id"
+    const val SPECIALTY_DOCTOR_ACTIVE_FIELD = "active"
 
-    //Buttons
-    const val ADD = "Add"
-    const val DISMISS = "Dismiss"
+    const val USER_COLLECTION_NAME = "users"
+    const val USER_AUTHENTICATION_ID_FIELD = "authentication_id"
+    const val USER_ACTIVE_FIELD = "active"
 
-    //Placeholders todo: review
-    const val NAME = "Type a book title..."
-    const val ICON = "Type the author name..."
-    const val EMPTY_STRING = ""
 }
