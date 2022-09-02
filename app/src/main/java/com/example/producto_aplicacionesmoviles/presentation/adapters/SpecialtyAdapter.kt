@@ -5,6 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.producto_aplicacionesmoviles.R
 import com.example.producto_aplicacionesmoviles.data.model.Specialty
+import com.example.producto_aplicacionesmoviles.presentation.viewholders.SpecialtyViewHolder
 
 class SpecialtyAdapter(private val specialtyList: List<Specialty>,private val onClickListener:(specialtyId:String)->Unit) :
     RecyclerView.Adapter<SpecialtyViewHolder>() {

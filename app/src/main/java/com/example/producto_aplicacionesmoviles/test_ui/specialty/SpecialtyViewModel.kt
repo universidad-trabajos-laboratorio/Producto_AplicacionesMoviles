@@ -1,4 +1,4 @@
-package com.example.producto_aplicacionesmoviles.viewmodels
+package com.example.producto_aplicacionesmoviles.test_ui.specialty
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel

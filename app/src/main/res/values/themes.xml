@@ -21,9 +21,8 @@
         <item name="android:navigationBarColor" tools:targetApi="l">#002445</item>
     </style>
     <style name="StylesApp" parent="Theme.Producto_AplicacionesMoviles">
-        <item name="android:statusBarColor" tools:targetApi="l">#0187BA</item>
-
-        <item name="android:navigationBarColor" tools:targetApi="l">#0187BA</item>
+        <item name="android:statusBarColor" tools:targetApi="l">@color/app_celeste</item>
+        <item name="android:navigationBarColor" tools:targetApi="l">@color/app_celeste</item>
     </style>
 
     <style name="ThemeIconFooter_Dark">
@@ -73,4 +72,11 @@
     <style name="Theme.Producto_AplicacionesMoviles.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="Theme.Producto_AplicacionesMoviles.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+
+    <style name="Circular" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
 </resources>

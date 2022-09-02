@@ -50,6 +50,9 @@
         android:name="com.example.producto_aplicacionesmoviles.presentation.views.specialty.SpecialtyFragment"
         android:label="fragment_specialty"
         tools:layout="@layout/fragment_specialty" >
+        <action
+            android:id="@+id/action_specialtyFragment_to_specialtyDoctorsFragment"
+            app:destination="@id/specialtyDoctorsFragment" />
     </fragment>
     <fragment
         android:id="@+id/specialtyDoctorsFragment"

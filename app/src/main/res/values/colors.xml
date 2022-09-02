@@ -11,4 +11,7 @@
     <color name="app_titulo">#45BCFF</color>
     <color name="bg_app">#DDEAF6</color>
     <color name="home_bg_card">#FFFFFF</color>
+
+    <color name="btn_nav_selected_text">#083B4F</color>
+    <color name="btn_nav_unselected_text">#597C89</color>
 </resources>

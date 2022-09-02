@@ -12,8 +12,9 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import com.example.producto_aplicacionesmoviles.R
 import com.example.producto_aplicacionesmoviles.databinding.FragmentSpecialtyBinding
+
 import com.example.producto_aplicacionesmoviles.presentation.adapters.SpecialtyAdapter
-import com.example.producto_aplicacionesmoviles.viewmodels.SpecialtyViewModel
+import com.example.producto_aplicacionesmoviles.test_ui.specialty.SpecialtyViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint()
@@ -47,7 +48,7 @@ class SpecialtyFragment : Fragment() {
     }
 
     private fun openDoctors(specialtyId: String) {
-        findNavController().navigate(R.id.specialtyDoctorsFragment)
+        findNavController().navigate(R.id.action_specialtyFragment_to_specialtyDoctorsFragment)
     }
 
 
