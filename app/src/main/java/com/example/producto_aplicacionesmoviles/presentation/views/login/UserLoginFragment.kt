@@ -26,7 +26,6 @@ class UserLoginFragment : Fragment() {
         return view
     }
 
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.btnIngresar.setOnClickListener {
@@ -51,7 +50,6 @@ class UserLoginFragment : Fragment() {
     private fun openApp() {
         startActivity(Intent(context, AppActivity::class.java))
     }
-
     private fun isCorrectCredentials(email: String, password: String): Boolean {
         if (email.isNotEmpty() && password.isNotEmpty()) {
             return true
@@ -59,7 +57,6 @@ class UserLoginFragment : Fragment() {
         showMessageError("Fields cannot be empty")
         return false
     }
-
     private fun showMessageError(message: String) {
         Toast.makeText(
             this.activity?.baseContext,
@@ -67,7 +64,6 @@ class UserLoginFragment : Fragment() {
             Toast.LENGTH_SHORT
         ).show()
     }
-
     override fun onDestroy() {
         super.onDestroy()
         _binding = null

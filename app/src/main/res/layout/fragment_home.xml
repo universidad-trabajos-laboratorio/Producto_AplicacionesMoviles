@@ -61,7 +61,8 @@
                     app:cardBackgroundColor="@color/home_bg_card"
                     app:cardCornerRadius="11dp"
                     app:contentPadding="20dp"
-
+                    android:foreground="?attr/selectableItemBackground"
+                    android:clickable="true"
                     >
 
                     <LinearLayout
@@ -120,7 +121,8 @@
                     app:cardBackgroundColor="@color/home_bg_card"
                     app:cardCornerRadius="11dp"
                     app:contentPadding="20dp"
-
+                    android:foreground="?attr/selectableItemBackground"
+                    android:clickable="true"
 
                     >
 
@@ -193,7 +195,8 @@
                     app:cardBackgroundColor="@color/home_bg_card"
                     app:cardCornerRadius="11dp"
                     app:contentPadding="20dp"
-
+                    android:foreground="?attr/selectableItemBackground"
+                    android:clickable="true"
                     >
 
                     <LinearLayout
@@ -271,7 +274,8 @@
                     app:cardBackgroundColor="@color/home_bg_card"
                     app:cardCornerRadius="11dp"
                     app:contentPadding="20dp"
-
+                    android:foreground="?attr/selectableItemBackground"
+                    android:clickable="true"
                     >
 
                     <LinearLayout
@@ -323,6 +327,7 @@
                     android:layout_height="0dp" />
 
                 <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/card_AboutHospital"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -330,6 +335,8 @@
                     app:cardBackgroundColor="@color/home_bg_card"
                     app:cardCornerRadius="11dp"
                     app:contentPadding="20dp"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:clickable="true"
 
 
                     >
