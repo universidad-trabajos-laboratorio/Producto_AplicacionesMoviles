@@ -33,10 +33,10 @@ class SpecialtyDoctorsFragment : Fragment() {
     specialtyDoctorsViewModel.doctorsBySpecialtyResponse.observe(viewLifecycleOwner,Observer{ specialtyDoctorList->
         binding.rvSpecialtyDoctors.adapter = SpecialtyDoctorAdapter(specialtyDoctorList)
     })
-        specialtyDoctorsViewModel.isLoading.observe(viewLifecycleOwner,Observer{ isLoading->
-            binding.progress.isVisible = isLoading
-        })
 
+    specialtyDoctorsViewModel.isLoading.observe(viewLifecycleOwner,Observer{ isLoading->
+        binding.progress.isVisible = isLoading
+    })
 
 
         return binding.root

@@ -19,13 +19,28 @@ class UsersRepositoryImpl @Inject constructor(
 ): UsersRepository {
 
     override fun getUsersFromFirestore() = callbackFlow {
-        val snapshotListener = usersRef.orderBy(Constants.USER_ACTIVE_FIELD)
-            .orderBy(Constants.USER_AUTHENTICATION_ID_FIELD)
+        val snapshotListener = usersRef
             .whereNotEqualTo(Constants.USER_ACTIVE_FIELD, false)
             .addSnapshotListener { snapshot, e ->
                 val response = if (snapshot != null) {
                     val users = snapshot.toObjects(User::class.java)
                     Response.Success(users)
+                } else {
+                    Response.Error(e?.message ?: e.toString())
+                }
+                trySend(response).isSuccess
+            }
+        awaitClose {
+            snapshotListener.remove()
+        }
+    }
+
+    override fun getUserByUserIdFromFirestore( user_id: String) = callbackFlow {
+        val snapshotListener = usersRef.document(user_id)
+            .addSnapshotListener { snapshot, e ->
+                val response = if (snapshot != null) {
+                    val doctorUser = snapshot.toObject(User::class.java)
+                    Response.Success(doctorUser)
                 } else {
                     Response.Error(e?.message ?: e.toString())
                 }

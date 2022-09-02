@@ -17,8 +17,7 @@ class SpecialtiesRepositoryImpl @Inject constructor(
     private val specialtiesRef: CollectionReference
 ): SpecialtiesRepository {
     override fun getSpecialtiesFromFirestore() = callbackFlow {
-        val snapshotListener = specialtiesRef.orderBy(Constants.SPECIALTY_ACTIVE_FIELD)
-            .orderBy(Constants.SPECIALTY_NAME_FIELD)
+        val snapshotListener = specialtiesRef
             .whereNotEqualTo(Constants.SPECIALTY_ACTIVE_FIELD, false)
             .addSnapshotListener { snapshot, e ->
             val response = if (snapshot != null) {

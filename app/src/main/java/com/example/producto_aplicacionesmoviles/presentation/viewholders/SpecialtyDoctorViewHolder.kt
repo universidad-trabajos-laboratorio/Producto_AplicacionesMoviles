@@ -14,14 +14,15 @@ import com.example.producto_aplicacionesmoviles.databinding.ItemSpecialtyDoctorB
 class SpecialtyDoctorViewHolder(view:View):RecyclerView.ViewHolder(view) {
     private val binding = ItemSpecialtyDoctorBinding.bind(view)
     fun bin(specialtyDoctor: SpecialtyDoctor){
-        binding.tvName.text = specialtyDoctor.title
-        val active:Boolean = specialtyDoctor.active?:false
+        binding.tvName.text = specialtyDoctor.name
+        /*val active:Boolean = specialtyDoctor.active?:false
+
         if(active){
             DrawableCompat.setTint(binding.tvState.compoundDrawables[0], Color.parseColor("#000"))
             binding.tvState.text = "Disponible"
-        }else{
+        }else{+
             DrawableCompat.setTint(binding.tvState.compoundDrawables[0], Color.parseColor(R.color.app_titulo.toString()))
             binding.tvState.text = "No Disponible"
-        }
+        }*/
     }
 }

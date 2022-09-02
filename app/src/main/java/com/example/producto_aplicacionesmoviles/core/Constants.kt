@@ -14,6 +14,7 @@ object Constants {
     const val SPECIALTY_DOCTOR_ACTIVE_FIELD = "active"
 
     const val USER_COLLECTION_NAME = "users"
+    const val USER_ID_FIELD = "id"
     const val USER_AUTHENTICATION_ID_FIELD = "authentication_id"
     const val USER_ACTIVE_FIELD = "active"
 

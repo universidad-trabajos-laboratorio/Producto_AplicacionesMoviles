@@ -43,29 +43,32 @@ class SpecialtyDoctorsViewModel @Inject constructor(
     }
 
     fun getDoctorsBySpecialtyId(specialtyId : String) = viewModelScope.launch {
-        var result: List<SpecialtyDoctor>? = emptyList()
+        var specialtyDoctorsResultList: List<SpecialtyDoctor>? = emptyList()
+
         useCases.getSpecialtyDoctorsBySpecialtyId(specialtyId).collect { response ->
             when(response) {
                 is Response.Loading -> isLoading.postValue(true)
                 is Response.Success -> {
-                    result = response.data
+                    specialtyDoctorsResultList = response.data
                 }
                 is Response.Error -> Utils.printMessage(response.message)
             }
 
-            if (!result.isNullOrEmpty()){
-                doctorsBySpecialtyResponse.postValue(result!!)
+            if (!specialtyDoctorsResultList.isNullOrEmpty()){
+                doctorsBySpecialtyResponse.postValue(specialtyDoctorsResultList!!)
                 isLoading.postValue(false)
             }
         }
+
     }
 
-    fun addDoctor( user_id: String?, specialty_id: String? , title: String?,
+    fun addDoctor( user_id: String?, specialty_id: String? , name: String?, title: String?,
                    biography :String? , enter_date : Long?, active: Boolean?
     ) = viewModelScope.launch {
         val newSpecialtyDoctor = SpecialtyDoctor(
             user_id = user_id,
             specialty_id = specialty_id,
+            name = name ?: "Unknown",
             title= title ?: "S/N",
             biography= biography ?: "S/N",
             enter_date = enter_date?: Date().time,
@@ -75,3 +78,4 @@ class SpecialtyDoctorsViewModel @Inject constructor(
     }
 
 }
+

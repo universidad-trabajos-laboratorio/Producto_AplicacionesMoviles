@@ -19,8 +19,7 @@ class SpecialtyDoctorsRepositoryImpl @Inject constructor(
 ): SpecialtyDoctorsRepository {
 
     override fun getSpecialtyDoctorsFromFirestore() = callbackFlow {
-        val snapshotListener = specialtyDoctorsRef.orderBy(Constants.SPECIALTY_DOCTOR_ACTIVE_FIELD)
-            .orderBy(Constants.SPECIALTY_DOCTOR_SPECIALTY_ID_FIELD)
+        val snapshotListener = specialtyDoctorsRef
             .whereNotEqualTo(Constants.SPECIALTY_DOCTOR_ACTIVE_FIELD, false)
             .addSnapshotListener { snapshot, e ->
                 val response = if (snapshot != null) {
@@ -37,9 +36,8 @@ class SpecialtyDoctorsRepositoryImpl @Inject constructor(
     }
 
     override fun getSpecialtyDoctorsBySpecialtyIdFromFirestore( specialtyId : String) = callbackFlow {
-        val snapshotListener = specialtyDoctorsRef.orderBy(Constants.SPECIALTY_DOCTOR_ACTIVE_FIELD)
-            .orderBy(Constants.SPECIALTY_DOCTOR_SPECIALTY_ID_FIELD)
-            .whereNotEqualTo(Constants.SPECIALTY_DOCTOR_ACTIVE_FIELD, false)
+        val snapshotListener = specialtyDoctorsRef
+            .whereEqualTo(Constants.SPECIALTY_DOCTOR_ACTIVE_FIELD, true)
             .whereEqualTo(Constants.SPECIALTY_DOCTOR_SPECIALTY_ID_FIELD, specialtyId)
             .addSnapshotListener { snapshot, e ->
                 val response = if (snapshot != null) {
@@ -63,6 +61,7 @@ class SpecialtyDoctorsRepositoryImpl @Inject constructor(
                 id = id,
                 user_id= specialtyDoctor.user_id,
                 specialty_id = specialtyDoctor.specialty_id,
+                name = specialtyDoctor.name,
                 title = specialtyDoctor.title,
                 biography = specialtyDoctor.biography,
                 enter_date = specialtyDoctor.enter_date,

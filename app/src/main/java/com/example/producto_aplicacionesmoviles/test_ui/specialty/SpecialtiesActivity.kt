@@ -30,7 +30,7 @@ class SpecialtiesActivity : AppCompatActivity() {
         }*/
         //uploadSpecialties(i)
         //uploadUsers(i)
-        //uploadSpecialtyDoctors(i)
+        uploadSpecialtyDoctors(i)
         i += 1
     }
 
@@ -131,37 +131,40 @@ class SpecialtiesActivity : AppCompatActivity() {
 
         val list : List<SpecialtyDoctor> = listOf(
             SpecialtyDoctor(
-                user_id = "8pjE1kjCHouMbyn1S3JY",
-                specialty_id = "rV2C4WwCrnNp4mJt3hDN",
+                user_id = "nFuW9zT7zJB0WQsGZ3vF",
+                specialty_id = "VbsxlFeOoiWxd09tG0d5",
+                name = "Melio Diaz Diaz",
                 title = "Doctor especializado en Neumología",
                 biography = "Lorem ipsum es el texto que se usa habitualmente en diseño gráfico en demostraciones de tipografías o de borradores de diseño para probar el diseño visual antes de insertar el texto final. Wikipedia\n",
                 active = true
             ),
             SpecialtyDoctor(
-                user_id = "wFmcecyvRPUUMIfroXEb5FYtQKw1",
-                specialty_id = "6IiWTHWR8blS8N2XxeAT",
+                user_id = "5Ek2RRiHiPu7SQZsB4Wy",
+                specialty_id = "ifuuQlmCXJLBJOCSLJmK",
+                name = "Abel Llontop Meza",
                 title = "Doctor especializado en Pediatría",
                 biography = "Lorem ipsum es el texto que se usa habitualmente en diseño gráfico en demostraciones de tipografías o de borradores de diseño para probar el diseño visual antes de insertar el texto final. Wikipedia\n",
                 active = true
             ),
             SpecialtyDoctor(
-                user_id = "8pjE1kjCHouMbyn1S3JY",
-                specialty_id = "6CzX6gfC7H25Jwfod3KN",
+                user_id = "nFuW9zT7zJB0WQsGZ3vF",
+                specialty_id = "cR4HyNp2Xhiyt7KODaYA",
+                name = "Melio Diaz Diaz",
                 title = "Doctor",
                 biography = "Lorem ipsum es el texto que se usa habitualmente en diseño gráfico en demostraciones de tipografías o de borradores de diseño para probar el diseño visual antes de insertar el texto final. Wikipedia\n",
                 active = true
             ),
             SpecialtyDoctor(
-                user_id = "wFmcecyvRPUUMIfroXEb5FYtQKw1",
-                specialty_id = "6CzX6gfC7H25Jwfod3KN",
+                user_id = "5Ek2RRiHiPu7SQZsB4Wy",
+                specialty_id = "cR4HyNp2Xhiyt7KODaYA",
+                name = "Abel Llontop Meza",
                 title = "Doctor",
                 biography = "Lorem ipsum es el texto que se usa habitualmente en diseño gráfico en demostraciones de tipografías o de borradores de diseño para probar el diseño visual antes de insertar el texto final. Wikipedia\n",
                 active = true
             ),
         )
-
         list.forEach { doctor ->
-            specialtyDoctorsViewModel.addDoctor(doctor.user_id, doctor.specialty_id,
+            specialtyDoctorsViewModel.addDoctor(doctor.user_id, doctor.specialty_id, doctor.name,
                 doctor.title, doctor.biography, doctor.enter_date, doctor.active)
         }
     }

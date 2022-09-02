@@ -19,6 +19,7 @@ import com.example.producto_aplicacionesmoviles.domain.use_case.specialtydoctors
 import com.example.producto_aplicacionesmoviles.domain.use_case.specialtydoctors.GetSpecialtyDoctorsBySpecialtyId
 import com.example.producto_aplicacionesmoviles.domain.use_case.users.AddUser
 import com.example.producto_aplicacionesmoviles.domain.use_case.users.DeleteUser
+import com.example.producto_aplicacionesmoviles.domain.use_case.users.GetUserByUserId
 import com.example.producto_aplicacionesmoviles.domain.use_case.users.GetUsers
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.ktx.firestore
@@ -69,6 +70,7 @@ object AppModule {
         repo: UsersRepository
     ) : UserUseCases = UserUseCases(
         getUsers = GetUsers(repo),
+        getUserById = GetUserByUserId(repo),
         addUser = AddUser(repo),
         deleteUser = DeleteUser(repo)
     )
