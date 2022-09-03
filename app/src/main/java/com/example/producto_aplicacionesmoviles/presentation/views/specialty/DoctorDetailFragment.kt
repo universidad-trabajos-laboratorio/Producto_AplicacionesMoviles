@@ -52,10 +52,12 @@ class DoctorDetailFragment : Fragment() {
         return "Dr ${titleArray[titleArray.size-1]} ${titleArray[titleArray.size-2]?:""}"
     }
 
-    override fun onDestroy() {
-        super.onDestroy()
+    override fun onDestroyView() {
+        super.onDestroyView()
         _binding = null
     }
+
+
 
 
 }

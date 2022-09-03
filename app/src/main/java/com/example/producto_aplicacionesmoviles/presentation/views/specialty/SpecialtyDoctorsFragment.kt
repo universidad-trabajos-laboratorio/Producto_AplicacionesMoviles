@@ -67,8 +67,8 @@ class SpecialtyDoctorsFragment : Fragment() {
         var action = SpecialtyDoctorsFragmentDirections.actionSpecialtyDoctorsFragmentToDoctorDetailFragment(specialtyDoctor)
         findNavController().navigate(action)
     }
-    override fun onDestroy() {
-        super.onDestroy()
+    override fun onDestroyView() {
+        super.onDestroyView()
         _binding = null
     }
 
