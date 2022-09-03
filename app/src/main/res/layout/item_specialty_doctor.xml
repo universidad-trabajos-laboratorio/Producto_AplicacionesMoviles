@@ -34,9 +34,7 @@
         android:drawablePadding="8dp"
         android:textColor="#5E5E5E"
         android:textSize="12sp"
-        app:drawableStartCompat="@drawable/circle"
-        app:drawableTint="#00DD16"
-
+        app:drawableStartCompat="@drawable/circle_danger"
         app:layout_constraintStart_toStartOf="@id/tv_name"
         app:layout_constraintTop_toBottomOf="@id/tv_name"
         tools:text="Disponible" />

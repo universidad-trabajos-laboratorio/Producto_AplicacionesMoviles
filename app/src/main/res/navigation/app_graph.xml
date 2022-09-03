@@ -39,7 +39,11 @@
         android:id="@+id/doctorDetailFragment"
         android:name="com.example.producto_aplicacionesmoviles.presentation.views.specialty.DoctorDetailFragment"
         android:label="fragment_doctor_detail"
-        tools:layout="@layout/fragment_doctor_detail" />
+        tools:layout="@layout/fragment_doctor_detail" >
+        <argument
+            android:name="doctor"
+            app:argType="com.example.producto_aplicacionesmoviles.data.model.SpecialtyDoctor" />
+    </fragment>
     <fragment
         android:id="@+id/perfilFragment"
         android:name="com.example.producto_aplicacionesmoviles.presentation.views.perfil.PerfilFragment"
@@ -63,5 +67,8 @@
             android:name="id"
             app:argType="string"
             android:defaultValue="0" />
+        <action
+            android:id="@+id/action_specialtyDoctorsFragment_to_doctorDetailFragment"
+            app:destination="@id/doctorDetailFragment" />
     </fragment>
 </navigation>

@@ -19,4 +19,10 @@ class ConsultaCreateFragment : Fragment() {
         _binding = FragmentConsultaCreateBinding.inflate(inflater, container, false)
         return binding.root
     }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        _binding = null
+    }
+
 }

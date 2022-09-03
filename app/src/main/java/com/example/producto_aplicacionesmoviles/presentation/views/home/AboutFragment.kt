@@ -46,4 +46,9 @@ class AboutFragment : Fragment(),OnMapReadyCallback {
             null
         )
     }
+    override fun onDestroy() {
+        super.onDestroy()
+        _binding = null
+    }
+
 }

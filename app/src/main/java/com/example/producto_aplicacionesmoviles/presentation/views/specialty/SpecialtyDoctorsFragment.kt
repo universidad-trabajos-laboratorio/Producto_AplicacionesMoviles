@@ -8,8 +8,10 @@ import android.view.ViewGroup
 import androidx.core.view.isVisible
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.GridLayoutManager
+import com.example.producto_aplicacionesmoviles.data.model.SpecialtyDoctor
 
 import com.example.producto_aplicacionesmoviles.databinding.FragmentSpecialtyDoctorsBinding
 import com.example.producto_aplicacionesmoviles.presentation.adapters.SpecialtyDoctorAdapter
@@ -31,7 +33,9 @@ class SpecialtyDoctorsFragment : Fragment() {
         _binding = FragmentSpecialtyDoctorsBinding.inflate(inflater, container, false)
         initRecycleView()
     specialtyDoctorsViewModel.doctorsBySpecialtyResponse.observe(viewLifecycleOwner,Observer{ specialtyDoctorList->
-        binding.rvSpecialtyDoctors.adapter = SpecialtyDoctorAdapter(specialtyDoctorList)
+        binding.rvSpecialtyDoctors.adapter = SpecialtyDoctorAdapter(specialtyDoctorList){doctor->
+            openDetailDoctor(doctor)
+        }
     })
 
     specialtyDoctorsViewModel.isLoading.observe(viewLifecycleOwner,Observer{ isLoading->
@@ -45,7 +49,9 @@ class SpecialtyDoctorsFragment : Fragment() {
     private fun initRecycleView() {
         val grid = GridLayoutManager(this.context, 2)
         binding.rvSpecialtyDoctors.layoutManager = grid
-        binding.rvSpecialtyDoctors.adapter = SpecialtyDoctorAdapter(emptyList())
+        binding.rvSpecialtyDoctors.adapter = SpecialtyDoctorAdapter(emptyList()){doctor->
+            openDetailDoctor(doctor)
+        }
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -56,5 +62,15 @@ class SpecialtyDoctorsFragment : Fragment() {
         val id = args.id.toString()
         specialtyDoctorsViewModel.getDoctorsBySpecialtyId(id)
     }
+
+    private fun openDetailDoctor(specialtyDoctor:SpecialtyDoctor){
+        var action = SpecialtyDoctorsFragmentDirections.actionSpecialtyDoctorsFragmentToDoctorDetailFragment(specialtyDoctor)
+        findNavController().navigate(action)
+    }
+    override fun onDestroy() {
+        super.onDestroy()
+        _binding = null
+    }
+
 
 }

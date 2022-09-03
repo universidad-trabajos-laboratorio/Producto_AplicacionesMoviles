@@ -19,4 +19,10 @@ class ConsultaDetailDialog : Fragment() {
         _binding = FragmentConsultaDetailDialogBinding.inflate(inflater, container, false)
         return binding.root
     }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        _binding = null
+    }
+
 }

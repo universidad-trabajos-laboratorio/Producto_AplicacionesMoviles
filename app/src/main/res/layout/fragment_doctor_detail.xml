@@ -51,8 +51,7 @@
                     android:drawablePadding="8dp"
                     android:textColor="#5E5E5E"
                     android:textSize="12sp"
-                    app:drawableStartCompat="@drawable/circle"
-                    app:drawableTint="#00DD16"
+                    app:drawableStartCompat="@drawable/circle_danger"
                     app:layout_constraintStart_toStartOf="@id/tv_name"
                     app:layout_constraintTop_toBottomOf="@id/tv_name"
                     tools:text="Disponible" />
@@ -90,8 +89,9 @@
                 android:layout_height="wrap_content"
                 android:textColor="#242424"
                 android:textSize="16sp"
+                android:layout_marginEnd="8dp"
                 app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toLeftOf="@id/iv_DoctorDetailLogo"
+                app:layout_constraintRight_toLeftOf="@id/iv_DoctorDetailLogoCard"
                 app:layout_constraintTop_toBottomOf="@id/label_nombreCompleto"
                 tools:text="Melio Josue Diaz Diaz" />
 
@@ -111,8 +111,9 @@
                 android:layout_height="wrap_content"
                 android:textColor="#242424"
                 android:textSize="16sp"
+                android:layout_marginEnd="8dp"
                 app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toLeftOf="@id/iv_DoctorDetailLogo"
+                app:layout_constraintRight_toLeftOf="@id/iv_DoctorDetailLogoCard"
                 app:layout_constraintTop_toBottomOf="@id/label_tiempoLaborando"
                 tools:text="4 dias" />
 
@@ -133,8 +134,9 @@
                 android:layout_height="wrap_content"
                 android:textColor="#242424"
                 android:textSize="16sp"
+                android:layout_marginEnd="8dp"
                 app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toLeftOf="@id/iv_DoctorDetailLogo"
+                app:layout_constraintRight_toLeftOf="@id/iv_DoctorDetailLogoCard"
                 app:layout_constraintTop_toBottomOf="@id/label_grado"
                 tools:text="Dr en meta infartos" />
 
@@ -153,35 +155,42 @@
                 android:id="@+id/tv_doctorDetailStudies"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:text="@string/label_uns"
+                android:layout_marginEnd="8dp"
                 android:textColor="#242424"
                 android:textSize="16sp"
                 app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toLeftOf="@id/iv_DoctorDetailLogo"
-                app:layout_constraintTop_toBottomOf="@id/label_studies"
-                tools:text="UNS" />
+                app:layout_constraintRight_toLeftOf="@id/iv_DoctorDetailLogoCard"
+                app:layout_constraintTop_toBottomOf="@id/label_studies" />
 
-            <com.google.android.material.imageview.ShapeableImageView
-                android:id="@id/iv_DoctorDetailLogo"
+            <androidx.cardview.widget.CardView
+                android:id="@+id/iv_DoctorDetailLogoCard"
                 android:layout_width="200dp"
                 android:layout_height="200dp"
+                app:cardCornerRadius="100dp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:shapeAppearanceOverlay="@style/Circular"
-                tools:ignore="ImageContrastCheck"
+                app:layout_constraintTop_toTopOf="parent">
 
-                tools:srcCompat="@tools:sample/avatars" />
+                <ImageView
+                    android:id="@id/iv_DoctorDetailLogo"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/icon_perfil_selected" />
+
+
+            </androidx.cardview.widget.CardView>
 
 
             <TextView
-                android:layout_marginTop="16dp"
                 android:id="@+id/label_descripcion"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
                 android:text="@string/label_descripcion"
                 android:textColor="#5C5C5C"
                 android:textSize="14sp"
                 app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/iv_DoctorDetailLogo" />
+                app:layout_constraintTop_toBottomOf="@id/iv_DoctorDetailLogoCard" />
 
             <TextView
 
@@ -195,10 +204,10 @@
                 tools:text="@string/lorem" />
 
             <TextView
-                android:layout_marginTop="16dp"
                 android:id="@+id/label_horariosDeAtencion"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
                 android:text="@string/label_horarios_de_atencion"
                 android:textColor="#5C5C5C"
                 android:textSize="14sp"

@@ -7,14 +7,14 @@ import com.example.producto_aplicacionesmoviles.R
 import com.example.producto_aplicacionesmoviles.data.model.SpecialtyDoctor
 import com.example.producto_aplicacionesmoviles.presentation.viewholders.SpecialtyDoctorViewHolder
 
-class SpecialtyDoctorAdapter(private val specialtyDoctorList:List<SpecialtyDoctor>):RecyclerView.Adapter<SpecialtyDoctorViewHolder>() {
+class SpecialtyDoctorAdapter(private val specialtyDoctorList:List<SpecialtyDoctor>, private val onClickListener:(doctor:SpecialtyDoctor)->Unit):RecyclerView.Adapter<SpecialtyDoctorViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SpecialtyDoctorViewHolder {
         val layoutInflater = LayoutInflater.from(parent.context)
         return SpecialtyDoctorViewHolder(layoutInflater.inflate(R.layout.item_specialty_doctor,parent,false))
     }
 
     override fun onBindViewHolder(holder: SpecialtyDoctorViewHolder, position: Int) {
-        holder.bin(specialtyDoctorList[position])
+        holder.bin(specialtyDoctorList[position],onClickListener)
     }
 
     override fun getItemCount(): Int {

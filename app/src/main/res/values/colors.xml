@@ -14,4 +14,7 @@
 
     <color name="btn_nav_selected_text">#083B4F</color>
     <color name="btn_nav_unselected_text">#597C89</color>
+    <color name="success">#00DD16</color>
+    <color name="danger">#FC6258</color>
+
 </resources>

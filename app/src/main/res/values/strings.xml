@@ -61,4 +61,5 @@
     <string name="About_title">Acerca del Hospital</string>
     <string name="label_Ubicacion">Ubicacion</string>
     <string name="direccionHospital">AV. GARCILAZO DE LA VEGA NRO. 658 CASCO URBANO ANCASH - CASMA - CASMA</string>
+    <string name="label_uns">UNS</string>
 </resources>
