@@ -51,6 +51,27 @@ class UsersRepositoryImpl @Inject constructor(
         }
     }
 
+    override fun getUserByAuthIdFromFirestore( auth_id: String) = callbackFlow {
+        val snapshotListener = usersRef.whereEqualTo(Constants.USER_AUTHENTICATION_ID_FIELD, auth_id)
+            .limit(1)
+            .addSnapshotListener { snapshot, e ->
+                val response = if (snapshot != null) {
+                    val doctorUser = snapshot.toObjects(User::class.java)
+                    if(doctorUser.size == 1){
+                        Response.Success(doctorUser[0])
+                    }else{
+                        Response.Error("User Not Found")
+                    }
+                } else {
+                    Response.Error(e?.message ?: e.toString())
+                }
+                trySend(response).isSuccess
+            }
+        awaitClose {
+            snapshotListener.remove()
+        }
+    }
+
     override fun addUserToFirestore( user: User) = flow {
         try {
             emit( Response.Loading )
