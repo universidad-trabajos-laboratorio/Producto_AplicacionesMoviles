@@ -3,13 +3,19 @@ package com.example.producto_aplicacionesmoviles.core
 import com.example.producto_aplicacionesmoviles.core.Constants.SPECIALTY_COLLECTION_NAME
 import com.example.producto_aplicacionesmoviles.core.Constants.SPECIALTY_DOCTOR_COLLECTION_NAME
 import com.example.producto_aplicacionesmoviles.core.Constants.USER_COLLECTION_NAME
+import com.example.producto_aplicacionesmoviles.core.Constants.WORKDAY_COLLECTION_NAME
 import com.example.producto_aplicacionesmoviles.data.repository.SpecialtiesRepositoryImpl
 import com.example.producto_aplicacionesmoviles.data.repository.SpecialtyDoctorsRepositoryImpl
 import com.example.producto_aplicacionesmoviles.data.repository.UsersRepositoryImpl
+import com.example.producto_aplicacionesmoviles.data.repository.WorkDaysRepositoryImpl
 import com.example.producto_aplicacionesmoviles.domain.repository.SpecialtiesRepository
 import com.example.producto_aplicacionesmoviles.domain.repository.SpecialtyDoctorsRepository
 import com.example.producto_aplicacionesmoviles.domain.repository.UsersRepository
-import com.example.producto_aplicacionesmoviles.domain.use_case.*
+import com.example.producto_aplicacionesmoviles.domain.repository.WorkDaysRepository
+import com.example.producto_aplicacionesmoviles.domain.use_case.SpecialtyDoctorUseCases
+import com.example.producto_aplicacionesmoviles.domain.use_case.SpecialtyUseCases
+import com.example.producto_aplicacionesmoviles.domain.use_case.UserUseCases
+import com.example.producto_aplicacionesmoviles.domain.use_case.WorkDaysUseCases
 import com.example.producto_aplicacionesmoviles.domain.use_case.specialty.AddSpecialty
 import com.example.producto_aplicacionesmoviles.domain.use_case.specialty.DeleteSpecialty
 import com.example.producto_aplicacionesmoviles.domain.use_case.specialty.GetSpecialty
@@ -18,6 +24,10 @@ import com.example.producto_aplicacionesmoviles.domain.use_case.specialtydoctors
 import com.example.producto_aplicacionesmoviles.domain.use_case.specialtydoctors.GetSpecialtyDoctors
 import com.example.producto_aplicacionesmoviles.domain.use_case.specialtydoctors.GetSpecialtyDoctorsBySpecialtyId
 import com.example.producto_aplicacionesmoviles.domain.use_case.users.*
+import com.example.producto_aplicacionesmoviles.domain.use_case.workday.AddWorkDay
+import com.example.producto_aplicacionesmoviles.domain.use_case.workday.DeleteWorkDay
+import com.example.producto_aplicacionesmoviles.domain.use_case.workday.GetWorkDays
+import com.example.producto_aplicacionesmoviles.domain.use_case.workday.GetWorkDaysByUserId
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
@@ -31,21 +41,6 @@ import dagger.hilt.components.SingletonComponent
 object AppModule {
     @Provides
     fun provideFirebaseFirestore() : FirebaseFirestore = Firebase.firestore
-/*
-    @Provides
-    fun provideUsersRef(
-        db: FirebaseFirestore
-    ) = db.collection(USER_COLLECTION_NAME)
-
-    @Provides
-    fun provideSpecialtiesRef(
-        db: FirebaseFirestore
-    ) = db.collection(SPECIALTY_COLLECTION_NAME)
-
-    @Provides
-    fun provideSpecialtyDoctorsRef(
-        db: FirebaseFirestore
-    ) = db.collection(SPECIALTY_DOCTOR_COLLECTION_NAME)*/
 
     @Provides
     fun provideUsersRepository(
@@ -61,6 +56,11 @@ object AppModule {
     fun provideSpecialtyDoctorsRepository(
         db: FirebaseFirestore
     ): SpecialtyDoctorsRepository = SpecialtyDoctorsRepositoryImpl(db.collection(SPECIALTY_DOCTOR_COLLECTION_NAME))
+
+    @Provides
+    fun provideWorkDaysRepository(
+        db: FirebaseFirestore
+    ): WorkDaysRepository = WorkDaysRepositoryImpl(db.collection(WORKDAY_COLLECTION_NAME))
 
     @Provides
     fun provideUserUseCases(
@@ -91,4 +91,15 @@ object AppModule {
         addSpecialtyDoctor = AddSpecialtyDoctor(repo),
         deleteSpecialtyDoctor = DeleteSpecialtyDoctor(repo)
     )
+
+    @Provides
+    fun provideWorkDayUseCases(
+        repo: WorkDaysRepository
+    ) : WorkDaysUseCases = WorkDaysUseCases(
+        getWorkDays = GetWorkDays(repo),
+        getWorkDaysByUserId = GetWorkDaysByUserId(repo),
+        addWorkDay = AddWorkDay(repo),
+        deleteWorkDay = DeleteWorkDay(repo)
+    )
+
 }

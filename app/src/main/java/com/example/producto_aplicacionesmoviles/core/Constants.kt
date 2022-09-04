@@ -18,4 +18,8 @@ object Constants {
     const val USER_AUTHENTICATION_ID_FIELD = "authentication_id"
     const val USER_ACTIVE_FIELD = "active"
 
+    const val WORKDAY_COLLECTION_NAME = "work_days"
+    const val WORKDAY_USER_ID_FIELD = "doctor_id"
+    const val WORKDAY_ACTIVE_FIELD = "active"
+
 }
