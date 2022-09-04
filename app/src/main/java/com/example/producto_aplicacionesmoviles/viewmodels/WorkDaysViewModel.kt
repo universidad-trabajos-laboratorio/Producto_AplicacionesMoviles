@@ -5,13 +5,10 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.producto_aplicacionesmoviles.core.Utils
 import com.example.producto_aplicacionesmoviles.data.model.Response
-import com.example.producto_aplicacionesmoviles.data.model.SpecialtyDoctor
 import com.example.producto_aplicacionesmoviles.data.model.WorkDay
-import com.example.producto_aplicacionesmoviles.domain.use_case.SpecialtyDoctorUseCases
 import com.example.producto_aplicacionesmoviles.domain.use_case.WorkDaysUseCases
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
-import java.util.*
 import javax.inject.Inject
 
 @HiltViewModel
@@ -59,7 +56,7 @@ class WorkDaysViewModel @Inject constructor(
         }
     }
 
-    fun addWorkDay( doctor_id: String?, day: Number? , morning_start: String?, morning_end: String?,
+    fun addWorkDay( doctor_id: String?, day: Int? , morning_start: String?, morning_end: String?,
                     afternoon_start :String? , afternoon_end : String?, active: Boolean?
     ) = viewModelScope.launch {
         val newWorkDay =  WorkDay(
