@@ -6,6 +6,17 @@ import java.util.concurrent.TimeUnit
 
 class TimeUtils {
     companion object {
+
+        fun getHourMinuteSecondFormattedStringFromDate(date : Date) : String{
+            var formatter = SimpleDateFormat("HH:mm:ss")
+            return formatter.format(date)
+        }
+
+        fun getHMSFormattedDateFromString(date : String) : Date{
+            var formatter = SimpleDateFormat("HH:mm:ss")
+            return formatter.parse(date)
+        }
+
         fun getElapsedTimeInHumanReadableFormatFromTimestamp(timestamp : Long, scale : Int= 2) : String{
             return getHumanReadableFormat(getTimeElapsed(timestamp).toInt(), scale = scale)
         }

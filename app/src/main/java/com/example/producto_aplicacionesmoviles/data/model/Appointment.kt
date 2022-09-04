@@ -1,5 +1,6 @@
 package com.example.producto_aplicacionesmoviles.data.model
 
+import com.example.producto_aplicacionesmoviles.core.TimeUtils
 import java.util.*
 
 
@@ -11,6 +12,6 @@ data class Appointment(
     var type: String? = "",
     var description: String? = "",
     var scheduled_date : Long? = Date().time,
-    var scheduled_time : Long? = Date().time,
+    var scheduled_time : String? = "01:00:00",
     var status: String? = "" // Reservada, Confirmada, Atendida, Cancelada
 )

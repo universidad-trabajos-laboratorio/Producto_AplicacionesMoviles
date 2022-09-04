@@ -7,9 +7,11 @@ import com.example.producto_aplicacionesmoviles.R
 import com.example.producto_aplicacionesmoviles.data.model.Specialty
 import com.example.producto_aplicacionesmoviles.data.model.SpecialtyDoctor
 import com.example.producto_aplicacionesmoviles.data.model.User
+import com.example.producto_aplicacionesmoviles.data.model.WorkDay
 import com.example.producto_aplicacionesmoviles.viewmodels.SpecialtyDoctorsViewModel
 import com.example.producto_aplicacionesmoviles.viewmodels.SpecialtyViewModel
 import com.example.producto_aplicacionesmoviles.viewmodels.UsersViewModel
+import com.example.producto_aplicacionesmoviles.viewmodels.WorkDaysViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import java.util.*
 
@@ -19,6 +21,7 @@ class SpecialtiesActivity : AppCompatActivity() {
     private val specialtyViewModel: SpecialtyViewModel by viewModels()
     private val userViewModel: UsersViewModel by viewModels()
     private val specialtyDoctorsViewModel: SpecialtyDoctorsViewModel by viewModels()
+    private val workDayViewModel: WorkDaysViewModel by viewModels()
     var i = 0
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,7 +33,8 @@ class SpecialtiesActivity : AppCompatActivity() {
         }*/
         //uploadSpecialties(i)
         //uploadUsers(i)
-        uploadSpecialtyDoctors(i)
+        //uploadSpecialtyDoctors(i)
+        uploadWorkDays(i)
         i += 1
     }
 
@@ -113,21 +117,6 @@ class SpecialtiesActivity : AppCompatActivity() {
     }
 
     fun uploadSpecialtyDoctors(i: Int){
-        /*var listaS : List<Specialty> = emptyList()
-        var listaU : List<User> = emptyList()
-
-        specialtyViewModel.specialtiesResponse.observe(
-            { this.lifecycle },
-            { specialties ->
-                listaS = specialties
-            }
-        )
-        userViewModel.usersResponse.observe(
-            { this.lifecycle },
-            { users ->
-                listaU = users
-            }
-        )*/
 
         val list : List<SpecialtyDoctor> = listOf(
             SpecialtyDoctor(
@@ -168,4 +157,93 @@ class SpecialtiesActivity : AppCompatActivity() {
                 doctor.title, doctor.biography, doctor.enter_date, doctor.active)
         }
     }
+
+    fun uploadWorkDays(i: Int){
+        /* Lunes y Martes hay guardia
+            ABEL
+                Lunes       -> 07:00 - 12:00 and 15:00 - 20:00
+                Martes      -> 07:00 - 12:00 and 20:00 - 23:59
+                Miercoles   -> 00:00 - 07:00
+                Jueves      -> 07:00 - 12:00 and 15:00 - 20:00
+                Viernes     -> Rest
+            MELIO
+                Lunes       -> 20:00 - 23:59
+                Martes      -> 00:00 - 07:00 and 15:00 - 20:00
+                Miercoles   -> 07:00 - 12:00 and 15:00 -20:00
+                Jueves      -> REST
+                Viernes     -> 07:00 - 12:00 and 15:00 - 20:00
+
+         */
+
+        // Horario de atencion para citas de 7 y 12 y de 15 a 20
+        val list : List<WorkDay> = listOf(
+            WorkDay(
+                doctor_id = "5Ek2RRiHiPu7SQZsB4Wy",//Abel
+                day = 2,// lunes
+                morning_start = "07:00:00",
+                morning_end = "12:00:00",
+                afternoon_start = "15:00:00",
+                afternoon_end = "20:00:00"
+            ),
+            WorkDay(
+                doctor_id = "5Ek2RRiHiPu7SQZsB4Wy",//Abel
+                day = 3,// martes
+                morning_start = "07:00:00",
+                morning_end = "12:00:00"
+            ),
+            WorkDay(
+                doctor_id = "5Ek2RRiHiPu7SQZsB4Wy",//Abel
+                day = 4// miercoles
+            ),
+            WorkDay(
+                doctor_id = "5Ek2RRiHiPu7SQZsB4Wy",//Abel
+                day = 5,// jueves
+                morning_start = "07:00:00",
+                morning_end = "12:00:00",
+                afternoon_start = "15:00:00",
+                afternoon_end = "20:00:00"
+            ),
+            WorkDay(
+                doctor_id = "5Ek2RRiHiPu7SQZsB4Wy",//Abel
+                day = 6,// viernes
+            ),
+            WorkDay(
+                doctor_id = "nFuW9zT7zJB0WQsGZ3vF",//Melio
+                day = 2// lunes
+            ),
+            WorkDay(
+                doctor_id = "nFuW9zT7zJB0WQsGZ3vF",//Melio
+                day = 3,// martes
+                afternoon_start = "15:00:00",
+                afternoon_end = "20:00:00"
+            ),
+            WorkDay(
+                doctor_id = "nFuW9zT7zJB0WQsGZ3vF",//Melio
+                day = 4,// miercoles
+                morning_start = "07:00:00",
+                morning_end = "12:00:00",
+                afternoon_start = "15:00:00",
+                afternoon_end = "20:00:00"
+            ),
+            WorkDay(
+                doctor_id = "nFuW9zT7zJB0WQsGZ3vF",//Melio
+                day = 5,// jueves
+            ),
+            WorkDay(
+                doctor_id = "nFuW9zT7zJB0WQsGZ3vF",//Melio
+                day = 6,// viernes
+                morning_start = "07:00:00",
+                morning_end = "12:00:00",
+                afternoon_start = "15:00:00",
+                afternoon_end = "20:00:00"
+            )
+        )
+
+        list.forEach{
+            workDayViewModel.addWorkDay(it.doctor_id, it.day, it.morning_start, it.morning_end,
+                it.afternoon_start, it.afternoon_end, it.active)
+        }
+
+    }
+
 }

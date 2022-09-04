@@ -6,10 +6,11 @@ import java.util.*
 data class WorkDay(
     var id : String? = "",
     var doctor_id: String? = "",//userid of doctor
-    var day: Number? = 0,// 1 - 7, lunes - viernes
-    var morning_start : Long? = Date().time,
-    var morning_end : Long? = Date().time,
-    var afternoon_start : Long? = Date().time,
-    var afternoon_end : Long? = Date().time,
+    var day: Number? = 0,// 0 - 6, domingo - sabado
+    var morning_start : String? = "07:00:00",
+    var morning_end : String? = "07:00:00",
+    var afternoon_start : String? = "15:00:00",
+    var afternoon_end : String? = "15:00:00",
     var active: Boolean? = true // Active
 )
+// Horario de atencion para citas de 7 y 12 y de 15 a 20
