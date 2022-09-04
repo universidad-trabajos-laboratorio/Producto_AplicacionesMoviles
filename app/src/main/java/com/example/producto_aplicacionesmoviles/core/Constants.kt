@@ -21,5 +21,5 @@ object Constants {
     const val WORKDAY_COLLECTION_NAME = "work_days"
     const val WORKDAY_USER_ID_FIELD = "doctor_id"
     const val WORKDAY_ACTIVE_FIELD = "active"
-
+    const val WORKDAY_DAY_FIELD = "day"
 }

@@ -39,6 +39,7 @@ class WorkDaysRepositoryImpl @Inject constructor(
         val snapshotListener = workDaysRef
             .whereEqualTo(Constants.WORKDAY_ACTIVE_FIELD, true)
             .whereEqualTo(Constants.WORKDAY_USER_ID_FIELD, user_id)
+            .orderBy( Constants.WORKDAY_DAY_FIELD)
             .addSnapshotListener { snapshot, e ->
                 val response = if (snapshot != null) {
                     val workDaysByUserId = snapshot.toObjects(WorkDay::class.java)
