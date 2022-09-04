@@ -7,13 +7,18 @@ import java.util.concurrent.TimeUnit
 class TimeUtils {
     companion object {
 
-        fun getHourMinuteSecondFormattedStringFromDate(date : Date) : String{
-            var formatter = SimpleDateFormat("HH:mm:ss")
+        fun formatDateToAmPmFormatString(date : Date) : String{
+            val dateFormat = SimpleDateFormat("hh.mm aa");
+            return dateFormat.format(date);
+        }
+
+        fun formatDateToHMSFormatString(date : Date) : String{
+            val formatter = SimpleDateFormat("HH:mm:ss")
             return formatter.format(date)
         }
 
-        fun getHMSFormattedDateFromString(date : String) : Date{
-            var formatter = SimpleDateFormat("HH:mm:ss")
+        fun parseToDateFromHMSFormatString(date : String) : Date{
+            val formatter = SimpleDateFormat("HH:mm:ss")
             return formatter.parse(date)
         }
 
