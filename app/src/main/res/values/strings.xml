@@ -62,4 +62,20 @@
     <string name="label_Ubicacion">Ubicacion</string>
     <string name="direccionHospital">AV. GARCILAZO DE LA VEGA NRO. 658 CASCO URBANO ANCASH - CASMA - CASMA</string>
     <string name="label_uns">UNS</string>
+    <string name="label_nombre">Nombre</string>
+    <string name="label_tipoDocumento">Tipo de codumento</string>
+    <string name="label_numeroDocumento">Numero de documento</string>
+    <string name="label_correoElectronico">Correo Electronico</string>
+    <string name="label_genero">Genero</string>
+    <string name="label_rol">Rol</string>
+    <string name="label_imagenDePerfil">Imagen de perfil</string>
+    <string name="label_opciones">Opciones</string>
+    <string name="label_cerrar_sesion">Cerrar sesion</string>
+    <string name="consultaHistory_title">¡Mis Consultas!</string>
+    <string name="consultaHisitory_description">Un listado de tus consultas hechas en este hospital mediante la aplicacion movil</string>
+    <string name="consultaHistory_section01">Consults Pendientes</string>
+    <string name="consultaHistory_section02">Consultas Finalizadas</string>
+    <string name="crear_consulta_title">¡Crear Consulta!</string>
+    <string name="crear_consulta_description">Recerve su cita medica llenando los datos correspondientes en el formulario</string>
+    <string name="label_especialidad">Especialidad</string>
 </resources>

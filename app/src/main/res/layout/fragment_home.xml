@@ -57,11 +57,12 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:focusable="true"
+
                     app:cardBackgroundColor="@color/home_bg_card"
                     app:cardCornerRadius="11dp"
                     app:contentPadding="20dp"
                     android:foreground="?attr/selectableItemBackground"
+                    android:focusable="true"
                     android:clickable="true"
                     >
 

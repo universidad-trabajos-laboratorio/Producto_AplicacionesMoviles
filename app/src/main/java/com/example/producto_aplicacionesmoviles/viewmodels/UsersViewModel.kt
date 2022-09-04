@@ -17,6 +17,7 @@ class UsersViewModel @Inject constructor(
     private val useCases: UserUseCases
 ) : ViewModel(){
     val usersResponse = MutableLiveData<List<User>>()
+    val userByAuthIdResponse = MutableLiveData<User>()
     val isLoading = MutableLiveData<Boolean>()
 
     init {
@@ -36,6 +37,24 @@ class UsersViewModel @Inject constructor(
 
             if (!result.isNullOrEmpty()){
                 usersResponse.postValue(result!!)
+                isLoading.postValue(false)
+            }
+        }
+    }
+
+    fun getUserByAuthId(authentication_id: String) = viewModelScope.launch {
+        var result: User? = User()
+        useCases.getUserByAuthId(authentication_id).collect { response ->
+            when(response) {
+                is Response.Loading -> isLoading.postValue(true)
+                is Response.Success -> {
+                    result = response.data
+                }
+                is Response.Error -> Utils.printMessage(response.message)
+            }
+
+            if (result!=null){
+                userByAuthIdResponse.postValue(result!!)
                 isLoading.postValue(false)
             }
         }

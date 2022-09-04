@@ -8,37 +8,37 @@
     <fragment
         android:id="@+id/homeFragment"
         android:name="com.example.producto_aplicacionesmoviles.presentation.views.home.HomeFragment"
-        android:label="fragment_home"
+        android:label="Home"
         tools:layout="@layout/fragment_home" />
     <fragment
         android:id="@+id/aboutFragment"
         android:name="com.example.producto_aplicacionesmoviles.presentation.views.home.AboutFragment"
-        android:label="fragment_about"
+        android:label="About"
         tools:layout="@layout/fragment_about" />
     <fragment
         android:id="@+id/consultaCreateFragment"
         android:name="com.example.producto_aplicacionesmoviles.presentation.views.consultas.ConsultaCreateFragment"
-        android:label="fragment_consulta_create"
+        android:label="Crear Consulta"
         tools:layout="@layout/fragment_consulta_create" />
     <fragment
         android:id="@+id/consultaDetailDialog"
         android:name="com.example.producto_aplicacionesmoviles.presentation.views.consultas.ConsultaDetailDialog"
-        android:label="fragment_consulta_detail_dialog"
+        android:label="Detalle Consulta"
         tools:layout="@layout/fragment_consulta_detail_dialog" />
     <fragment
         android:id="@+id/consultaHistoryFragment"
         android:name="com.example.producto_aplicacionesmoviles.presentation.views.consultas.ConsultaHistoryFragment"
-        android:label="fragment_consulta_history"
+        android:label="Consultas"
         tools:layout="@layout/fragment_consulta_history" />
     <fragment
         android:id="@+id/doctorAvailabilityFragment"
         android:name="com.example.producto_aplicacionesmoviles.presentation.views.consultas.DoctorAvailabilityFragment"
-        android:label="fragment_doctor_availability"
+        android:label="Horarios Doctor"
         tools:layout="@layout/fragment_doctor_availability" />
     <fragment
         android:id="@+id/doctorDetailFragment"
         android:name="com.example.producto_aplicacionesmoviles.presentation.views.specialty.DoctorDetailFragment"
-        android:label="fragment_doctor_detail"
+        android:label="Doctor"
         tools:layout="@layout/fragment_doctor_detail" >
         <argument
             android:name="doctor"
@@ -47,12 +47,12 @@
     <fragment
         android:id="@+id/perfilFragment"
         android:name="com.example.producto_aplicacionesmoviles.presentation.views.perfil.PerfilFragment"
-        android:label="fragment_perfil"
+        android:label="Perfil"
         tools:layout="@layout/fragment_perfil" />
     <fragment
         android:id="@+id/specialtyFragment"
         android:name="com.example.producto_aplicacionesmoviles.presentation.views.specialty.SpecialtyFragment"
-        android:label="fragment_specialty"
+        android:label="Especialidades"
         tools:layout="@layout/fragment_specialty" >
         <action
             android:id="@+id/action_specialtyFragment_to_specialtyDoctorsFragment"
@@ -61,7 +61,7 @@
     <fragment
         android:id="@+id/specialtyDoctorsFragment"
         android:name="com.example.producto_aplicacionesmoviles.presentation.views.specialty.SpecialtyDoctorsFragment"
-        android:label="fragment_specialty_doctors"
+        android:label="Doctores"
         tools:layout="@layout/fragment_specialty_doctors" >
         <argument
             android:name="id"
