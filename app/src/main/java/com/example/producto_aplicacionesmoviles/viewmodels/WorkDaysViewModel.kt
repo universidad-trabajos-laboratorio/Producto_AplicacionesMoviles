@@ -59,7 +59,7 @@ class WorkDaysViewModel @Inject constructor(
         }
     }
 
-    fun addWorkDay( doctor_id: String?, day: Number? , morning_start: String?, morning_end: String?,
+    fun addWorkDay( doctor_id: String?, day: Int? , morning_start: String?, morning_end: String?,
                     afternoon_start :String? , afternoon_end : String?, active: Boolean?
     ) = viewModelScope.launch {
         val newWorkDay =  WorkDay(
