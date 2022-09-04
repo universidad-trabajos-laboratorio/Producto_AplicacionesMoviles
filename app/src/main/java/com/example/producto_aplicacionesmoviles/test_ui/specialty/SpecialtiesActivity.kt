@@ -180,7 +180,7 @@ class SpecialtiesActivity : AppCompatActivity() {
         val list : List<WorkDay> = listOf(
             WorkDay(
                 doctor_id = "5Ek2RRiHiPu7SQZsB4Wy",//Abel
-                day = 2,// lunes
+                day = 1,// lunes
                 morning_start = "07:00:00",
                 morning_end = "12:00:00",
                 afternoon_start = "15:00:00",
@@ -188,17 +188,17 @@ class SpecialtiesActivity : AppCompatActivity() {
             ),
             WorkDay(
                 doctor_id = "5Ek2RRiHiPu7SQZsB4Wy",//Abel
-                day = 3,// martes
+                day = 2,// martes
                 morning_start = "07:00:00",
                 morning_end = "12:00:00"
             ),
             WorkDay(
                 doctor_id = "5Ek2RRiHiPu7SQZsB4Wy",//Abel
-                day = 4// miercoles
+                day = 3// miercoles
             ),
             WorkDay(
                 doctor_id = "5Ek2RRiHiPu7SQZsB4Wy",//Abel
-                day = 5,// jueves
+                day = 4,// jueves
                 morning_start = "07:00:00",
                 morning_end = "12:00:00",
                 afternoon_start = "15:00:00",
@@ -206,21 +206,21 @@ class SpecialtiesActivity : AppCompatActivity() {
             ),
             WorkDay(
                 doctor_id = "5Ek2RRiHiPu7SQZsB4Wy",//Abel
-                day = 6,// viernes
+                day = 5,// viernes
             ),
             WorkDay(
                 doctor_id = "nFuW9zT7zJB0WQsGZ3vF",//Melio
-                day = 2// lunes
+                day = 1// lunes
             ),
             WorkDay(
                 doctor_id = "nFuW9zT7zJB0WQsGZ3vF",//Melio
-                day = 3,// martes
+                day = 2,// martes
                 afternoon_start = "15:00:00",
                 afternoon_end = "20:00:00"
             ),
             WorkDay(
                 doctor_id = "nFuW9zT7zJB0WQsGZ3vF",//Melio
-                day = 4,// miercoles
+                day = 3,// miercoles
                 morning_start = "07:00:00",
                 morning_end = "12:00:00",
                 afternoon_start = "15:00:00",
@@ -228,11 +228,11 @@ class SpecialtiesActivity : AppCompatActivity() {
             ),
             WorkDay(
                 doctor_id = "nFuW9zT7zJB0WQsGZ3vF",//Melio
-                day = 5,// jueves
+                day = 4,// jueves
             ),
             WorkDay(
                 doctor_id = "nFuW9zT7zJB0WQsGZ3vF",//Melio
-                day = 6,// viernes
+                day = 5,// viernes
                 morning_start = "07:00:00",
                 morning_end = "12:00:00",
                 afternoon_start = "15:00:00",
