@@ -14,7 +14,9 @@ class WorkDayViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val day = Utils.getDayOfWeek(workDay.day!!.toInt())
         var timeMessage = transformMessageTimeWorkDay(workDay)
         val message = "$day :  $timeMessage"
-        binding.dayWorkMessage.text = "Hello"
+        if(timeMessage.isNotEmpty()){
+            binding.dayWorkMessage.text = message
+        }
     }
 
     private fun transformDayAmPmToString(morning_start: String): String {
@@ -32,12 +34,16 @@ class WorkDayViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         var timeMessage = ""
         if (morning_start == morning_end) {
             timeMessage = "De $messageAfternoon"
+            if (afternoon_start == afternoon_end) {
+                timeMessage = ""
+            }
         } else {
             timeMessage = "De $messageMorning"
+            if (afternoon_start != afternoon_end) {
+                timeMessage += " y de $messageAfternoon"
+            }
         }
-        if (afternoon_start != afternoon_end) {
-            timeMessage += " y de $messageAfternoon"
-        }
+
         return timeMessage
     }
 }
