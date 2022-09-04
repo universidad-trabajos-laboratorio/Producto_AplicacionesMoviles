@@ -59,16 +59,6 @@ class WorkDaysRepositoryImpl @Inject constructor(
             val id = workDaysRef.document().id
             workDay.id = id
             val addition = workDaysRef.document(id).set(workDay).await()
-            /*val newWorkDay = WorkDay(
-                id = id,
-                doctor_id = workDay.doctor_id,
-                day = workDay.day,
-                morning_start = workDay.morning_start,
-                morning_end = workDay.morning_end,
-                afternoon_start = workDay.afternoon_start,
-                afternoon_end = workDay.afternoon_end
-            )*/
-            //val addition = workDaysRef.document(id).set(newWorkDay).await()
             emit(Response.Success(addition))
         } catch (e: Exception) {
             emit(Response.Error(e.message ?: e.toString()))

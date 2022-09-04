@@ -40,7 +40,7 @@ class WorkDaysViewModel @Inject constructor(
         }
     }
 
-    fun getDoctorsBySpecialtyId(userId : String) = viewModelScope.launch {
+    fun getWorkDaysByUserId(userId : String) = viewModelScope.launch {
         var specialtyDoctorsResultList: List<WorkDay>? = emptyList()
 
         useCases.getWorkDaysByUserId(userId).collect { response ->

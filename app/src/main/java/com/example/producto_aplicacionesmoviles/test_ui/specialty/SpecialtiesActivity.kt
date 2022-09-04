@@ -34,7 +34,7 @@ class SpecialtiesActivity : AppCompatActivity() {
         //uploadSpecialties(i)
         //uploadUsers(i)
         //uploadSpecialtyDoctors(i)
-        uploadWorkDays(i)
+        //uploadWorkDays(i)
         i += 1
     }
 

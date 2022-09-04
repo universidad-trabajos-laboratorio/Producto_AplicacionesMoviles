@@ -214,15 +214,15 @@
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tv_doctorDetailDescription" />
 
-            <ListView
-                android:id="@+id/lv_doctorDetailOfficeHours"
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvWorkDay"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="#242424"
                 android:textSize="16sp"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/label_horariosDeAtencion"
-                tools:ignore="NestedScrolling" />
+               />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
