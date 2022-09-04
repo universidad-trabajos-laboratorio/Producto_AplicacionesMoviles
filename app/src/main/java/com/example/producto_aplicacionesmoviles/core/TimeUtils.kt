@@ -35,7 +35,7 @@ class TimeUtils {
             return diffInSec
         }
 
-        private fun getActualDateInLima() : Date {
+        fun getActualDateInLima() : Date {
             var limaTimeZone : TimeZone = TimeZone.getTimeZone("America/Lima")
             var formatter : SimpleDateFormat = SimpleDateFormat("yyyy-MM-dd HH:mm:ss")
             formatter.setTimeZone(limaTimeZone)

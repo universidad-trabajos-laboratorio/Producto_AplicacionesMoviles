@@ -1,6 +1,6 @@
 package com.example.producto_aplicacionesmoviles.data.model
 
-import java.util.*
+import com.example.producto_aplicacionesmoviles.core.TimeUtils
 
 
 data class User(
@@ -13,8 +13,8 @@ data class User(
     var document_number: String = "",
     var rol: String? = "patient", //admin, patient, doctor, ver si usamos rol o rol_id
     var profile_img : String? = "path/to/default.jpg",
-    var created_at: Long? = Date().time,
-    var last_login_date: Long? = Date().time,
+    var created_at: Long? = TimeUtils.getActualDateInLima().time,
+    var last_login_date: Long? = TimeUtils.getActualDateInLima().time,
     var active: Boolean? = true
 )
 

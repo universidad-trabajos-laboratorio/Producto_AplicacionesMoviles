@@ -2,8 +2,8 @@ package com.example.producto_aplicacionesmoviles.data.model
 
 
 import android.os.Parcelable
+import com.example.producto_aplicacionesmoviles.core.TimeUtils
 import kotlinx.android.parcel.Parcelize
-import java.util.*
 
 @Parcelize
 data class SpecialtyDoctor(
@@ -13,6 +13,6 @@ data class SpecialtyDoctor(
     var name: String ?= "Unknown",
     var title: String ?= "S/N",
     var biography:String? = "S/N",
-    var enter_date : Long? = Date().time,
+    var enter_date : Long? = TimeUtils.getActualDateInLima().time,
     var active: Boolean? = true
 ):Parcelable

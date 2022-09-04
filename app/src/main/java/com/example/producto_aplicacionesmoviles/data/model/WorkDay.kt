@@ -6,7 +6,7 @@ import java.util.*
 data class WorkDay(
     var id : String? = "",
     var doctor_id: String? = "",//userid of doctor
-    var day: Int? = 0,// 0 - 6, domingo - sabado
+    var day: Int? = 0,// 1 - 7, domingo - sabado
     var morning_start : String? = "07:00:00",
     var morning_end : String? = "07:00:00",
     var afternoon_start : String? = "15:00:00",

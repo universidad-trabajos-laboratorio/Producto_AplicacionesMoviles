@@ -3,6 +3,7 @@ package com.example.producto_aplicacionesmoviles.viewmodels
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.example.producto_aplicacionesmoviles.core.TimeUtils
 import com.example.producto_aplicacionesmoviles.core.Utils
 import com.example.producto_aplicacionesmoviles.data.model.Response
 import com.example.producto_aplicacionesmoviles.data.model.SpecialtyDoctor
@@ -71,7 +72,7 @@ class SpecialtyDoctorsViewModel @Inject constructor(
             name = name ?: "Unknown",
             title= title ?: "S/N",
             biography= biography ?: "S/N",
-            enter_date = enter_date?: Date().time,
+            enter_date = enter_date?: TimeUtils.getActualDateInLima().time,
             active = active?: true
         )
         useCases.addSpecialtyDoctor(newSpecialtyDoctor).collect { }

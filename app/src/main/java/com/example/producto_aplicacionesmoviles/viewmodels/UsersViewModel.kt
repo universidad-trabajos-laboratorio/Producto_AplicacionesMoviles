@@ -3,6 +3,7 @@ package com.example.producto_aplicacionesmoviles.viewmodels
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.example.producto_aplicacionesmoviles.core.TimeUtils
 import com.example.producto_aplicacionesmoviles.core.Utils
 import com.example.producto_aplicacionesmoviles.data.model.Response
 import com.example.producto_aplicacionesmoviles.data.model.User
@@ -73,8 +74,8 @@ class UsersViewModel @Inject constructor(
             document_number = document_number,
             rol = rol?:"patient",
             profile_img = profile_img?:"path/to/default.jpg",
-            created_at = created_at?: Date().time,
-            last_login_date = last_login_date?: Date().time,
+            created_at = created_at?: TimeUtils.getActualDateInLima().time,
+            last_login_date = last_login_date?: TimeUtils.getActualDateInLima().time,
             active = active?: true
         )
         useCases.addUser(newUser).collect { }

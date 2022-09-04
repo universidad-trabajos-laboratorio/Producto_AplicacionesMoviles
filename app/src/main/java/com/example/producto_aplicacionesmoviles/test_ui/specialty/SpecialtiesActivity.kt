@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import com.example.producto_aplicacionesmoviles.R
+import com.example.producto_aplicacionesmoviles.core.TimeUtils
 import com.example.producto_aplicacionesmoviles.data.model.Specialty
 import com.example.producto_aplicacionesmoviles.data.model.SpecialtyDoctor
 import com.example.producto_aplicacionesmoviles.data.model.User
@@ -80,8 +81,8 @@ class SpecialtiesActivity : AppCompatActivity() {
                 document_number = user.document_number,
                 rol = user.rol?:"patient",
                 profile_img = user.profile_img?:"path/to/default.jpg",
-                created_at = user.created_at?: Date().time,
-                last_login_date = user.last_login_date?: Date().time,
+                created_at = user.created_at?: TimeUtils.getActualDateInLima().time,
+                last_login_date = user.last_login_date?: TimeUtils.getActualDateInLima().time,
                 active = user.active?: true
             )
         }

@@ -19,7 +19,7 @@ class Utils {
         fun getDayOfWeek(i : Int):String{
             var dayName : String = "N/A"
             when(i){
-                0 -> dayName = "Domingo"
+                7 -> dayName = "Domingo"
                 1 -> dayName = "Lunes"
                 2 -> dayName = "Martes"
                 3 -> dayName = "Miercoles"
