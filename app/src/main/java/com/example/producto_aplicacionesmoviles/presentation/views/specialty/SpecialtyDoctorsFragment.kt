@@ -11,6 +11,7 @@ import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.GridLayoutManager
+import com.example.producto_aplicacionesmoviles.core.IconUtils
 import com.example.producto_aplicacionesmoviles.data.model.SpecialtyDoctor
 
 import com.example.producto_aplicacionesmoviles.databinding.FragmentSpecialtyDoctorsBinding
@@ -56,15 +57,16 @@ class SpecialtyDoctorsFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.tvSpecialtyDoctorTitle.text = "¡Cardiólogos!"
-        binding.tvSpecialtyDoctorDescription.text = "Personal calificado en cardeologia"
-        binding.tvSpecialtyDoctorNameSecction.text = "Listado de Cardiólogos"
-        val id = args.id.toString()
+        binding.tvSpecialtyDoctorTitle.text = args.specialty.name
+        binding.tvSpecialtyDoctorDescription.text = "Personal calificado en ${args.specialty.name}"
+        binding.tvSpecialtyDoctorNameSecction.text = "Listado de expertos en ${args.specialty.name}s"
+        val id = args.specialty.id.toString()
+        binding.ivSpecialtyDoctorLogo.setImageResource(IconUtils.getIdIcon(args.specialty.icon?:" "))
         specialtyDoctorsViewModel.getDoctorsBySpecialtyId(id)
     }
 
     private fun openDetailDoctor(specialtyDoctor:SpecialtyDoctor){
-        var action = SpecialtyDoctorsFragmentDirections.actionSpecialtyDoctorsFragmentToDoctorDetailFragment(specialtyDoctor)
+        var action = SpecialtyDoctorsFragmentDirections.actionSpecialtyDoctorsFragmentToDoctorDetailFragment(specialtyDoctor,args.specialty.icon!!)
         findNavController().navigate(action)
     }
     override fun onDestroyView() {

@@ -78,4 +78,8 @@
     <string name="crear_consulta_title">¡Crear Consulta!</string>
     <string name="crear_consulta_description">Recerve su cita medica llenando los datos correspondientes en el formulario</string>
     <string name="label_especialidad">Especialidad</string>
+    <string name="mision">Promover el acceso a una atención integral de salud con calidad y calidez, brindando soporte técnico, administrativo y asistencial a las áreas de nuestro ámbito, priorizando a los estratos de pobreza y extrema pobreza con la participación de la población, instituciones y comunidad organizada en la construcción de entornos saludables</string>
+    <string name="label_mision">Mision</string>
+    <string name="label_vision">Vision</string>
+    <string name="vision">Ser la institución médica líder de la red de salud pacifico sur, con una población sana y con entorno de vida saludables, respondiendo con eficacia y eficiencia los requerimientos de nuestros usuarios internos y externos</string>
 </resources>

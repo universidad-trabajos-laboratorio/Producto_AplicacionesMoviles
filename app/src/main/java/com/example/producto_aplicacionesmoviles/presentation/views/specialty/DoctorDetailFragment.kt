@@ -12,6 +12,7 @@ import androidx.lifecycle.Observer
 import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.producto_aplicacionesmoviles.R
+import com.example.producto_aplicacionesmoviles.core.IconUtils
 import com.example.producto_aplicacionesmoviles.core.TimeUtils
 import com.example.producto_aplicacionesmoviles.databinding.FragmentDoctorDetailBinding
 import com.example.producto_aplicacionesmoviles.presentation.adapters.WorkDayAdapter
@@ -55,6 +56,7 @@ class DoctorDetailFragment : Fragment() {
         binding.tvDoctorDetailFullName.text = args.doctor.name
         binding.tvDoctorDetailDescription.text = args.doctor.biography
         binding.tvDoctorDetailWorkingTime.text = TimeUtils.getElapsedTimeInHumanReadableFormatFromTimestamp(args.doctor.enter_date!!.toLong())
+        binding.ivDoctorDetailLogo.setImageResource(IconUtils.getIdIcon(args.icon))
         val active:Boolean = args.doctor.active?:false
 
         if(active){

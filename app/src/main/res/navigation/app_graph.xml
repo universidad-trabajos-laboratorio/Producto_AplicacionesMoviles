@@ -43,6 +43,9 @@
         <argument
             android:name="doctor"
             app:argType="com.example.producto_aplicacionesmoviles.data.model.SpecialtyDoctor" />
+        <argument
+            android:name="icon"
+            app:argType="string" />
     </fragment>
     <fragment
         android:id="@+id/perfilFragment"
@@ -64,9 +67,8 @@
         android:label="Doctores"
         tools:layout="@layout/fragment_specialty_doctors" >
         <argument
-            android:name="id"
-            app:argType="string"
-            android:defaultValue="0" />
+            android:name="specialty"
+            app:argType="com.example.producto_aplicacionesmoviles.data.model.Specialty"/>
         <action
             android:id="@+id/action_specialtyDoctorsFragment_to_doctorDetailFragment"
             app:destination="@id/doctorDetailFragment" />

@@ -54,10 +54,10 @@
                 >
 
                 <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/card_crearConsulta"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-
                     app:cardBackgroundColor="@color/home_bg_card"
                     app:cardCornerRadius="11dp"
                     app:contentPadding="20dp"
@@ -115,6 +115,7 @@
                     android:layout_height="0dp" />
 
                 <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/card_registrarConsulta"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -189,6 +190,7 @@
                 >
 
                 <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/card_doctores"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -268,6 +270,7 @@
                 >
 
                 <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/card_medicamentos"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"

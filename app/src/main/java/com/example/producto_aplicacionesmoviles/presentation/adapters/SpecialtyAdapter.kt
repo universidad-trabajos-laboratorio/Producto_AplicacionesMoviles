@@ -5,9 +5,10 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.producto_aplicacionesmoviles.R
 import com.example.producto_aplicacionesmoviles.data.model.Specialty
+import com.example.producto_aplicacionesmoviles.data.model.SpecialtyDoctor
 import com.example.producto_aplicacionesmoviles.presentation.viewholders.SpecialtyViewHolder
 
-class SpecialtyAdapter(private val specialtyList: List<Specialty>,private val onClickListener:(specialtyId:String)->Unit) :
+class SpecialtyAdapter(private val specialtyList: List<Specialty>,private val onClickListener:(specialty:Specialty)->Unit) :
     RecyclerView.Adapter<SpecialtyViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SpecialtyViewHolder {
         val layoutInflater = LayoutInflater.from(parent.context)

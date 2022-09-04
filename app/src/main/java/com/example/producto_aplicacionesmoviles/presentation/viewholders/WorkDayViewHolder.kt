@@ -26,7 +26,7 @@ class WorkDayViewHolder(view: View) : RecyclerView.ViewHolder(view) {
 
     private fun transformMessageTimeWorkDay(workDay: WorkDay): String {
         val morning_start = transformDayAmPmToString(workDay.morning_start!!)
-        val morning_end = transformDayAmPmToString(workDay.morning_start!!)
+        val morning_end = transformDayAmPmToString(workDay.morning_end!!)
         val afternoon_start = transformDayAmPmToString(workDay.afternoon_start!!)
         val afternoon_end = transformDayAmPmToString(workDay.afternoon_end!!)
         var messageMorning = "$morning_start a $morning_end"

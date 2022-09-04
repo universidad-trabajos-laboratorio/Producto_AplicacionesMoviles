@@ -19,7 +19,10 @@ class SpecialtyDoctorViewHolder(view:View):RecyclerView.ViewHolder(view) {
         binding.tvState.setCompoundDrawablesWithIntrinsicBounds(R.drawable.circle_danger,0,0,0)
             binding.tvState.text = "No Disponible"
         }
-        itemView.setOnClickListener {
+        binding.ivPhoto.setOnClickListener{
+            onClickListener(specialtyDoctor)
+        }
+        binding.btnSpecialtyDoctor.setOnClickListener{
             onClickListener(specialtyDoctor)
         }
     }

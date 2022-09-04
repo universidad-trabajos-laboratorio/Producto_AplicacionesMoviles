@@ -3,7 +3,6 @@ package com.example.producto_aplicacionesmoviles.presentation.views
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.Menu
 import android.view.MenuItem
 
 import androidx.navigation.NavController
@@ -27,6 +26,13 @@ class AppActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityAppBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+
+        navController = findNavController(R.id.nav_app_host_fragment)
+        binding.botonNavigationApp.setupWithNavController(navController)
+
+
+
         appBarConfiguration = AppBarConfiguration(
             setOf(
                 R.id.homeFragment,
@@ -35,17 +41,13 @@ class AppActivity : AppCompatActivity() {
                 R.id.consultaHistoryFragment
             )
         )
-
-        navController = findNavController(R.id.nav_app_host_fragment)
-
-
         //Toolbar
         setSupportActionBar(binding.toolbar)
-        setupActionBarWithNavController(navController,appBarConfiguration)
+        binding.toolbar.setupWithNavController(navController,appBarConfiguration)
 
 
-        binding.botonNavigationApp.setOnItemSelectedListener { item->rulesNavigationApp(item) }
-//        binding.botonNavigationApp.setupWithNavController(navController)
+//        binding.botonNavigationApp.setOnItemSelectedListener { item->rulesNavigationApp(item) }
+
     }
 
     private fun rulesNavigationApp(item:MenuItem):Boolean{
@@ -62,15 +64,15 @@ class AppActivity : AppCompatActivity() {
         return navController.navigateUp(appBarConfiguration) ||  return super.onSupportNavigateUp()
     }
 
-    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        menuInflater.inflate(R.menu.bottom_nav_menu,menu)
-        return true
-
-    //        return super.onCreateOptionsMenu(menu)
-    }
-
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-    return item.onNavDestinationSelected(navController) || super.onOptionsItemSelected(item)
-    }
+//    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+////        menuInflater.inflate(R.menu.bottom_nav_menu,menu)
+////        return true
+//
+//            return super.onCreateOptionsMenu(menu)
+//    }
+//
+//    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+//    return item.onNavDestinationSelected(navController) || super.onOptionsItemSelected(item)
+//    }
 
 }

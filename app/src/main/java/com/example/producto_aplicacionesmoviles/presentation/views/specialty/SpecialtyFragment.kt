@@ -12,6 +12,8 @@ import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import com.example.producto_aplicacionesmoviles.R
+import com.example.producto_aplicacionesmoviles.data.model.Specialty
+import com.example.producto_aplicacionesmoviles.data.model.SpecialtyDoctor
 import com.example.producto_aplicacionesmoviles.databinding.FragmentSpecialtyBinding
 
 import com.example.producto_aplicacionesmoviles.presentation.adapters.SpecialtyAdapter
@@ -36,8 +38,8 @@ class SpecialtyFragment : Fragment() {
             viewLifecycleOwner,
             Observer { currentSpeciatlyList ->
                 binding.rvSpecialty.adapter =
-                    SpecialtyAdapter(currentSpeciatlyList) { specialtyId ->
-                        openDoctors(specialtyId)
+                    SpecialtyAdapter(currentSpeciatlyList) { specialty ->
+                        openDoctors(specialty)
                     }
             })
 
@@ -48,8 +50,8 @@ class SpecialtyFragment : Fragment() {
         return binding.root
     }
 
-    private fun openDoctors(specialtyId: String) {
-        val action = SpecialtyFragmentDirections.actionSpecialtyFragmentToSpecialtyDoctorsFragment(specialtyId)
+    private fun openDoctors(specialty: Specialty) {
+        val action = SpecialtyFragmentDirections.actionSpecialtyFragmentToSpecialtyDoctorsFragment(specialty!!)
         findNavController().navigate(action)
     }
 
@@ -57,8 +59,8 @@ class SpecialtyFragment : Fragment() {
     private fun initRecyclerView() {
         val grid = GridLayoutManager(this.context, 3)
         binding.rvSpecialty.layoutManager = grid
-        binding.rvSpecialty.adapter = SpecialtyAdapter(emptyList()) { specialtyId ->
-            openDoctors(specialtyId)
+        binding.rvSpecialty.adapter = SpecialtyAdapter(emptyList()) { specialty ->
+            openDoctors(specialty)
         }
     }
 

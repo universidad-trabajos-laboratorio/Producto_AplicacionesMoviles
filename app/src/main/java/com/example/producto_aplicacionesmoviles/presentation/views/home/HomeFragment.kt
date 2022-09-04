@@ -18,8 +18,18 @@ class HomeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
+//        binding.cardAboutHospital.setOnClickListener{
+//            findNavController().navigate(R.id.aboutFragment)
+//        }
+//        binding.cardDoctores.setOnClickListener{
+//            findNavController().navigate(R.id.specialtyFragment)
+//        }
+//        binding.cardRegistrarConsulta.setOnClickListener{
+//            findNavController().navigate(R.id.consultaHistoryFragment)
+//        }
         binding.cardAboutHospital.setOnClickListener{
             findNavController().navigate(R.id.aboutFragment)
+
         }
 
 
