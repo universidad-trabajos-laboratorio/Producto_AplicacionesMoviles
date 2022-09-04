@@ -5,13 +5,10 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.producto_aplicacionesmoviles.core.Utils
 import com.example.producto_aplicacionesmoviles.data.model.Response
-import com.example.producto_aplicacionesmoviles.data.model.SpecialtyDoctor
 import com.example.producto_aplicacionesmoviles.data.model.WorkDay
-import com.example.producto_aplicacionesmoviles.domain.use_case.SpecialtyDoctorUseCases
 import com.example.producto_aplicacionesmoviles.domain.use_case.WorkDaysUseCases
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
-import java.util.*
 import javax.inject.Inject
 
 @HiltViewModel
