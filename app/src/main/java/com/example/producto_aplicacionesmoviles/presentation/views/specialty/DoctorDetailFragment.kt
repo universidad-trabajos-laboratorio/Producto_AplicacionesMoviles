@@ -13,6 +13,7 @@ import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.producto_aplicacionesmoviles.R
 import com.example.producto_aplicacionesmoviles.core.IconUtils
+import com.example.producto_aplicacionesmoviles.core.PhotoUtils
 import com.example.producto_aplicacionesmoviles.core.TimeUtils
 import com.example.producto_aplicacionesmoviles.databinding.FragmentDoctorDetailBinding
 import com.example.producto_aplicacionesmoviles.presentation.adapters.WorkDayAdapter
@@ -67,7 +68,19 @@ class DoctorDetailFragment : Fragment() {
             binding.tvDoctorDetailState.text = "No Disponible"
         }
 
+        binding.ivDoctorDetailPhoto.setImageResource(PhotoUtils.getNamePhoto(args.doctor.name?:" "))
+
+
+
+
         workDaysViewModel.getWorkDaysByUserId(args.doctor.user_id!!)
+
+
+
+
+
+
+
     }
 
     private fun convertTitle(title:String):String{

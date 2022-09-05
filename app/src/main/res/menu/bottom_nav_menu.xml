@@ -6,26 +6,21 @@
         android:title="Home"
         android:subtitle="Home"
         android:icon="@drawable/home_selector"
-        android:contentDescription="Pagina principal"
-
         />
     <item
         android:id="@+id/consultaHistoryFragment"
         android:title="Consultas"
         android:icon="@drawable/consultas_selector"
-        android:contentDescription="Registro de Consultas"
         />
     <item
-        android:id="@+id/specialtyFragment"
+        android:id="@+id/navigationSpecialty"
         android:title="Medicos"
         android:icon="@drawable/estetoscopio_selector"
-        android:contentDescription="Todas Nuestras Especialidades"
         />
     <item
         android:id="@+id/perfilFragment"
         android:title="Perfil"
         android:icon="@drawable/perfil_selector"
-        android:contentDescription="Tu hermoso perfil :3"
         />
 
 </menu>

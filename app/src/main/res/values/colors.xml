@@ -10,6 +10,7 @@
     <color name="app_celeste">#0187BA</color>
     <color name="app_titulo">#45BCFF</color>
     <color name="bg_app">#DDEAF6</color>
+    <color name="bg_app_alternative">#FFFFFF</color>
     <color name="home_bg_card">#FFFFFF</color>
 
     <color name="btn_nav_selected_text">#083B4F</color>

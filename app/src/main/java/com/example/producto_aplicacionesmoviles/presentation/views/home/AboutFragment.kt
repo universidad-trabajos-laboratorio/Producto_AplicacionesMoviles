@@ -20,6 +20,7 @@ class AboutFragment : Fragment(),OnMapReadyCallback {
 
     private lateinit var map:GoogleMap;
 
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?

@@ -9,7 +9,11 @@
         android:id="@+id/homeFragment"
         android:name="com.example.producto_aplicacionesmoviles.presentation.views.home.HomeFragment"
         android:label="Home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_aboutFragment"
+            app:destination="@id/aboutFragment" />
+    </fragment>
     <fragment
         android:id="@+id/aboutFragment"
         android:name="com.example.producto_aplicacionesmoviles.presentation.views.home.AboutFragment"
@@ -36,41 +40,57 @@
         android:label="Horarios Doctor"
         tools:layout="@layout/fragment_doctor_availability" />
     <fragment
-        android:id="@+id/doctorDetailFragment"
-        android:name="com.example.producto_aplicacionesmoviles.presentation.views.specialty.DoctorDetailFragment"
-        android:label="Doctor"
-        tools:layout="@layout/fragment_doctor_detail" >
-        <argument
-            android:name="doctor"
-            app:argType="com.example.producto_aplicacionesmoviles.data.model.SpecialtyDoctor" />
-        <argument
-            android:name="icon"
-            app:argType="string" />
-    </fragment>
-    <fragment
         android:id="@+id/perfilFragment"
         android:name="com.example.producto_aplicacionesmoviles.presentation.views.perfil.PerfilFragment"
         android:label="Perfil"
         tools:layout="@layout/fragment_perfil" />
-    <fragment
-        android:id="@+id/specialtyFragment"
-        android:name="com.example.producto_aplicacionesmoviles.presentation.views.specialty.SpecialtyFragment"
-        android:label="Especialidades"
-        tools:layout="@layout/fragment_specialty" >
-        <action
-            android:id="@+id/action_specialtyFragment_to_specialtyDoctorsFragment"
-            app:destination="@id/specialtyDoctorsFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/specialtyDoctorsFragment"
-        android:name="com.example.producto_aplicacionesmoviles.presentation.views.specialty.SpecialtyDoctorsFragment"
-        android:label="Doctores"
-        tools:layout="@layout/fragment_specialty_doctors" >
-        <argument
-            android:name="specialty"
-            app:argType="com.example.producto_aplicacionesmoviles.data.model.Specialty"/>
-        <action
-            android:id="@+id/action_specialtyDoctorsFragment_to_doctorDetailFragment"
-            app:destination="@id/doctorDetailFragment" />
-    </fragment>
+    <action
+        android:id="@+id/action_global_homeFragment"
+        app:destination="@id/homeFragment" />
+    <action
+        android:id="@+id/action_global_perfilFragment"
+        app:destination="@id/perfilFragment" />
+    <navigation
+        android:id="@+id/navigationSpecialty"
+        app:startDestination="@id/specialtyFragment">
+        <fragment
+            android:id="@+id/specialtyFragment"
+            android:name="com.example.producto_aplicacionesmoviles.presentation.views.specialty.SpecialtyFragment"
+            android:label="Especialidades"
+            tools:layout="@layout/fragment_specialty">
+            <action
+                android:id="@+id/action_specialtyFragment_to_specialtyDoctorsFragment"
+                app:destination="@id/specialtyDoctorsFragment" />
+        </fragment>
+        <fragment
+            android:id="@+id/specialtyDoctorsFragment"
+            android:name="com.example.producto_aplicacionesmoviles.presentation.views.specialty.SpecialtyDoctorsFragment"
+            android:label="Doctores"
+            tools:layout="@layout/fragment_specialty_doctors">
+            <argument
+                android:name="specialty"
+                app:argType="com.example.producto_aplicacionesmoviles.data.model.Specialty" />
+            <action
+                android:id="@+id/action_specialtyDoctorsFragment_to_doctorDetailFragment"
+                app:destination="@id/doctorDetailFragment" />
+        </fragment>
+        <fragment
+            android:id="@+id/doctorDetailFragment"
+            android:name="com.example.producto_aplicacionesmoviles.presentation.views.specialty.DoctorDetailFragment"
+            android:label="Doctor"
+            tools:layout="@layout/fragment_doctor_detail">
+            <argument
+                android:name="doctor"
+                app:argType="com.example.producto_aplicacionesmoviles.data.model.SpecialtyDoctor" />
+            <argument
+                android:name="icon"
+                app:argType="string" />
+        </fragment>
+    </navigation>
+    <action
+        android:id="@+id/action_global_navigationSpecialty"
+        app:destination="@id/navigationSpecialty" />
+    <action
+        android:id="@+id/action_global_consultaHistoryFragment"
+        app:destination="@id/consultaHistoryFragment" />
 </navigation>

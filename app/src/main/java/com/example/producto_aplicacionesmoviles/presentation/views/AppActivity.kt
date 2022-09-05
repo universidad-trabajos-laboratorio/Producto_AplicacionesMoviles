@@ -8,7 +8,9 @@ import android.view.MenuItem
 import androidx.navigation.NavController
 
 import androidx.navigation.findNavController
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.*
+import com.example.producto_aplicacionesmoviles.AppGraphDirections
 import com.example.producto_aplicacionesmoviles.R
 import com.example.producto_aplicacionesmoviles.databinding.ActivityAppBinding
 import dagger.hilt.android.AndroidEntryPoint
@@ -29,9 +31,8 @@ class AppActivity : AppCompatActivity() {
 
 
         navController = findNavController(R.id.nav_app_host_fragment)
-        binding.botonNavigationApp.setupWithNavController(navController)
 
-
+//        appBarConfiguration = AppBarConfiguration(navController.graph)
 
         appBarConfiguration = AppBarConfiguration(
             setOf(
@@ -43,19 +44,26 @@ class AppActivity : AppCompatActivity() {
         )
         //Toolbar
         setSupportActionBar(binding.toolbar)
-        binding.toolbar.setupWithNavController(navController,appBarConfiguration)
+        binding.toolbar.setupWithNavController(navController)
+        setupActionBarWithNavController(navController,appBarConfiguration)
 
+       binding.botonNavigationApp.setupWithNavController(navController)
 
-//        binding.botonNavigationApp.setOnItemSelectedListener { item->rulesNavigationApp(item) }
+       binding.botonNavigationApp.setOnItemSelectedListener { item->rulesNavigationApp(item) }
 
     }
 
     private fun rulesNavigationApp(item:MenuItem):Boolean{
+        val actionHome = AppGraphDirections.actionGlobalHomeFragment()
+        val actionConsultaHistory = AppGraphDirections.actionGlobalConsultaHistoryFragment()
+        val actionSpecialty = AppGraphDirections.actionGlobalNavigationSpecialty()
+        val actionPerfil = AppGraphDirections.actionGlobalPerfilFragment()
+
         when(item.itemId){
-            R.id.homeFragment ->navController.navigate(R.id.homeFragment)
-            R.id.consultaHistoryFragment ->navController.navigate(R.id.consultaHistoryFragment)
-            R.id.specialtyFragment ->navController.navigate(R.id.specialtyFragment)
-            R.id.perfilFragment ->navController.navigate(R.id.perfilFragment)
+            R.id.homeFragment ->navController.navigate(actionHome)
+            R.id.consultaHistoryFragment ->navController.navigate(actionConsultaHistory)
+            R.id.navigationSpecialty ->navController.navigate(actionSpecialty)
+            R.id.perfilFragment ->navController.navigate(actionPerfil)
         }
         return true
     }

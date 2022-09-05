@@ -47,6 +47,7 @@ class SpecialtyFragment : Fragment() {
             binding.progress.isVisible = stateLoading
         })
 
+
         return binding.root
     }
 
