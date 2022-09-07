@@ -3,22 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/app_graph"
-    app:startDestination="@id/homeFragment">
+    app:startDestination="@id/navigationHome">
 
-    <fragment
-        android:id="@+id/homeFragment"
-        android:name="com.example.producto_aplicacionesmoviles.presentation.views.home.HomeFragment"
-        android:label="Home"
-        tools:layout="@layout/fragment_home">
-        <action
-            android:id="@+id/action_homeFragment_to_aboutFragment"
-            app:destination="@id/aboutFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/aboutFragment"
-        android:name="com.example.producto_aplicacionesmoviles.presentation.views.home.AboutFragment"
-        android:label="About"
-        tools:layout="@layout/fragment_about" />
     <fragment
         android:id="@+id/consultaCreateFragment"
         android:name="com.example.producto_aplicacionesmoviles.presentation.views.consultas.ConsultaCreateFragment"
@@ -30,26 +16,11 @@
         android:label="Detalle Consulta"
         tools:layout="@layout/fragment_consulta_detail_dialog" />
     <fragment
-        android:id="@+id/consultaHistoryFragment"
-        android:name="com.example.producto_aplicacionesmoviles.presentation.views.consultas.ConsultaHistoryFragment"
-        android:label="Consultas"
-        tools:layout="@layout/fragment_consulta_history" />
-    <fragment
         android:id="@+id/doctorAvailabilityFragment"
         android:name="com.example.producto_aplicacionesmoviles.presentation.views.consultas.DoctorAvailabilityFragment"
         android:label="Horarios Doctor"
         tools:layout="@layout/fragment_doctor_availability" />
-    <fragment
-        android:id="@+id/perfilFragment"
-        android:name="com.example.producto_aplicacionesmoviles.presentation.views.perfil.PerfilFragment"
-        android:label="Perfil"
-        tools:layout="@layout/fragment_perfil" />
-    <action
-        android:id="@+id/action_global_homeFragment"
-        app:destination="@id/homeFragment" />
-    <action
-        android:id="@+id/action_global_perfilFragment"
-        app:destination="@id/perfilFragment" />
+
     <navigation
         android:id="@+id/navigationSpecialty"
         app:startDestination="@id/specialtyFragment">
@@ -87,10 +58,61 @@
                 app:argType="string" />
         </fragment>
     </navigation>
+
+    <navigation
+        android:id="@+id/navigationHome"
+        app:startDestination="@id/homeFragment">
+        <fragment
+            android:id="@+id/homeFragment"
+            android:name="com.example.producto_aplicacionesmoviles.presentation.views.home.HomeFragment"
+            android:label="Home"
+            tools:layout="@layout/fragment_home">
+            <action
+                android:id="@+id/action_homeFragment_to_aboutFragment"
+                app:destination="@id/aboutFragment" />
+        </fragment>
+        <fragment
+            android:id="@+id/aboutFragment"
+            android:name="com.example.producto_aplicacionesmoviles.presentation.views.home.AboutFragment"
+            android:label="About"
+            tools:layout="@layout/fragment_about" />
+    </navigation>
+    <navigation
+        android:id="@+id/navigationConsultas"
+        app:startDestination="@id/consultaHistoryFragment">
+        <fragment
+            android:id="@+id/consultaHistoryFragment"
+            android:name="com.example.producto_aplicacionesmoviles.presentation.views.consultas.ConsultaHistoryFragment"
+            android:label="Consultas"
+            tools:layout="@layout/fragment_consulta_history" />
+    </navigation>
+    <navigation
+        android:id="@+id/navigationPerfil"
+        app:startDestination="@id/perfilFragment">
+        <fragment
+            android:id="@+id/perfilFragment"
+            android:name="com.example.producto_aplicacionesmoviles.presentation.views.perfil.PerfilFragment"
+            android:label="Perfil"
+            tools:layout="@layout/fragment_perfil" />
+    </navigation>
+    <action
+        android:id="@+id/action_global_navigationConsultas"
+        app:destination="@id/navigationConsultas"
+        app:popUpTo="@id/navigationConsultas" />
+
+
     <action
         android:id="@+id/action_global_navigationSpecialty"
-        app:destination="@id/navigationSpecialty" />
+        app:destination="@id/navigationSpecialty"
+        app:popUpTo="@id/navigationSpecialty" />
+
     <action
-        android:id="@+id/action_global_consultaHistoryFragment"
-        app:destination="@id/consultaHistoryFragment" />
+        android:id="@+id/action_global_navigationHome"
+        app:destination="@id/navigationHome"
+        app:popUpTo="@id/navigationHome" />
+
+    <action
+        android:id="@+id/action_global_navigationPerfil"
+        app:destination="@id/navigationPerfil"
+        app:popUpTo="@id/navigationPerfil" />
 </navigation>

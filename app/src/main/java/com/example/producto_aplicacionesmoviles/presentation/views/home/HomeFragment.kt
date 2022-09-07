@@ -23,12 +23,14 @@ class HomeFragment : Fragment() {
             val action = HomeFragmentDirections.actionHomeFragmentToAboutFragment()
             findNavController().navigate(action)
         }
+
+        //Navigate other navigators
         binding.cardDoctores.setOnClickListener{
             val action = AppGraphDirections.actionGlobalNavigationSpecialty()
             findNavController().navigate(action)
         }
         binding.cardRegistroConsulta.setOnClickListener{
-            val action = AppGraphDirections.actionGlobalConsultaHistoryFragment()
+            val action = AppGraphDirections.actionGlobalNavigationConsultas()
             findNavController().navigate(action)
         }
 

@@ -2,13 +2,13 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/homeFragment"
+        android:id="@+id/navigationHome"
         android:title="Home"
         android:subtitle="Home"
         android:icon="@drawable/home_selector"
         />
     <item
-        android:id="@+id/consultaHistoryFragment"
+        android:id="@+id/navigationConsultas"
         android:title="Consultas"
         android:icon="@drawable/consultas_selector"
         />
@@ -18,7 +18,7 @@
         android:icon="@drawable/estetoscopio_selector"
         />
     <item
-        android:id="@+id/perfilFragment"
+        android:id="@+id/navigationPerfil"
         android:title="Perfil"
         android:icon="@drawable/perfil_selector"
         />

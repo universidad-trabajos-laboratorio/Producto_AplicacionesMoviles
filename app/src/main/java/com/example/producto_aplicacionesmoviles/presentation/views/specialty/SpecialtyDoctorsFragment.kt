@@ -16,6 +16,7 @@ import com.example.producto_aplicacionesmoviles.data.model.SpecialtyDoctor
 
 import com.example.producto_aplicacionesmoviles.databinding.FragmentSpecialtyDoctorsBinding
 import com.example.producto_aplicacionesmoviles.presentation.adapters.SpecialtyDoctorAdapter
+import com.example.producto_aplicacionesmoviles.presentation.views.AppActivity
 import com.example.producto_aplicacionesmoviles.viewmodels.SpecialtyDoctorsViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -53,6 +54,7 @@ class SpecialtyDoctorsFragment : Fragment() {
         binding.rvSpecialtyDoctors.adapter = SpecialtyDoctorAdapter(emptyList()){doctor->
             openDetailDoctor(doctor)
         }
+
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -63,6 +65,8 @@ class SpecialtyDoctorsFragment : Fragment() {
         val id = args.specialty.id.toString()
         binding.ivSpecialtyDoctorLogo.setImageResource(IconUtils.getIdIcon(args.specialty.icon?:" "))
         specialtyDoctorsViewModel.getDoctorsBySpecialtyId(id)
+//        (this.activity as AppActivity).supportActionBar?.subtitle = "Especialistas en ${args.specialty.name}"
+
     }
 
     private fun openDetailDoctor(specialtyDoctor:SpecialtyDoctor){
@@ -72,6 +76,8 @@ class SpecialtyDoctorsFragment : Fragment() {
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+//        (this.activity as AppActivity).supportActionBar?.subtitle = ""
+
     }
 
 
