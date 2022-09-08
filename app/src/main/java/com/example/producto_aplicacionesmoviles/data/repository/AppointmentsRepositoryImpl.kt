@@ -42,7 +42,6 @@ class AppointmentsRepositoryImpl @Inject constructor(
         val snapshotListener = appointmentsRef
             .whereNotEqualTo(Constants.APPOINTMENT_STATUS_FIELD.uppercase(), cancelStatus)
             .whereEqualTo(Constants.APPOINTMENT_PATIENT_ID_FIELD, patientId)
-            .orderBy(Constants.APPOINTMENT_SCHEDULED_DATE_FIELD) //todo: review most recent to oldest appointment order
             .addSnapshotListener { snapshot, e ->
                 val response = if (snapshot != null) {
                     val appointmentsByPatientId = snapshot.toObjects(Appointment::class.java)

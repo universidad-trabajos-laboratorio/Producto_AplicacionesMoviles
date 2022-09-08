@@ -67,19 +67,19 @@
                 android:layout_height="wrap_content"
                 android:paddingRight="4dp" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingVertical="15dp"
-                android:text="@string/consultaHistory_section02"
-                android:textColor="#363636"
-                android:textSize="16sp" />
+<!--            <TextView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:paddingVertical="15dp"-->
+<!--                android:text="@string/consultaHistory_section02"-->
+<!--                android:textColor="#363636"-->
+<!--                android:textSize="16sp" />-->
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rvConsultasFinalizadas"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingRight="4dp" />
+<!--            <androidx.recyclerview.widget.RecyclerView-->
+<!--                android:id="@+id/rvConsultasFinalizadas"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:paddingRight="4dp" />-->
 
 
         </LinearLayout>
