@@ -61,23 +61,64 @@
                 android:textColor="#363636"
                 android:textSize="16sp" />
 
+<!--            <Spinner-->
+<!--                android:id="@+id/spinnerEspecialidad"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:spinnerMode="dialog"-->
+<!--                />-->
+
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/textField"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Elija el medico "
-                app:startIconDrawable="@drawable/icon_estetoscopio_selected"
-                >
 
-                <com.google.android.material.textfield.TextInputEditText
+                >
+                <AutoCompleteTextView
+
+                    android:id="@+id/autocomleteEspecialidad"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:hint="Especialidad"
+                    android:inputType="none"
                     />
-
             </com.google.android.material.textfield.TextInputLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="15dp"
+                android:text="@string/label_medico"
+                android:textColor="#363636"
+                android:textSize="16sp" />
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+                <AutoCompleteTextView
 
+                    android:id="@+id/autocomleteDoctores"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Doctor"
+                    android:inputType="none"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+            <Button
+                android:id="@+id/btn_siguiente"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginVertical="40dp"
+                android:layout_marginHorizontal="60dp"
 
-
+                android:backgroundTint="#0CA34F"
+                android:padding="16dp"
+                android:text="@string/label_siguiente"
+                android:textAllCaps="false"
+                android:textSize="16sp"
+                app:cornerRadius="12dp"
+                tools:ignore="TextContrastCheck" />
 
         </LinearLayout>
 

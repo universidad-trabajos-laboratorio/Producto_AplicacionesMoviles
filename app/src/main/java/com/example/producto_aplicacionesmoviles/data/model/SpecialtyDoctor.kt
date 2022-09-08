@@ -15,4 +15,8 @@ data class SpecialtyDoctor(
     var biography:String? = "S/N",
     var enter_date : Long? = TimeUtils.getActualDateInLima().time,
     var active: Boolean? = true
-):Parcelable
+):Parcelable{
+    override fun toString(): String {
+        return name.toString()
+    }
+}

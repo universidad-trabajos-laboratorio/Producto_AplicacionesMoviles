@@ -5,11 +5,7 @@
     android:id="@+id/app_graph"
     app:startDestination="@id/navigationHome">
 
-    <fragment
-        android:id="@+id/consultaCreateFragment"
-        android:name="com.example.producto_aplicacionesmoviles.presentation.views.consultas.ConsultaCreateFragment"
-        android:label="Crear Consulta"
-        tools:layout="@layout/fragment_consulta_create" />
+
     <fragment
         android:id="@+id/consultaDetailDialog"
         android:name="com.example.producto_aplicacionesmoviles.presentation.views.consultas.ConsultaDetailDialog"
@@ -70,7 +66,15 @@
             <action
                 android:id="@+id/action_homeFragment_to_aboutFragment"
                 app:destination="@id/aboutFragment" />
+            <action
+                android:id="@+id/action_homeFragment_to_consultaCreateFragment"
+                app:destination="@id/consultaCreateFragment" />
         </fragment>
+        <fragment
+            android:id="@+id/consultaCreateFragment"
+            android:name="com.example.producto_aplicacionesmoviles.presentation.views.consultas.ConsultaCreateFragment"
+            android:label="Crear Consulta"
+            tools:layout="@layout/fragment_consulta_create" />
         <fragment
             android:id="@+id/aboutFragment"
             android:name="com.example.producto_aplicacionesmoviles.presentation.views.home.AboutFragment"

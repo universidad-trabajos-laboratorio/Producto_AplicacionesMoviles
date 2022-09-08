@@ -32,7 +32,7 @@
         <entry key="..\:/ANDROID/Proyectos/Producto_AplicacionesMoviles/app/src/main/res/layout/fragment_consulta_detail_dialog.xml" value="0.19739583333333333" />
         <entry key="..\:/ANDROID/Proyectos/Producto_AplicacionesMoviles/app/src/main/res/layout/fragment_consulta_history.xml" value="0.264" />
         <entry key="..\:/ANDROID/Proyectos/Producto_AplicacionesMoviles/app/src/main/res/layout/fragment_doctor_availability.xml" value="0.19739583333333333" />
-        <entry key="..\:/ANDROID/Proyectos/Producto_AplicacionesMoviles/app/src/main/res/layout/fragment_doctor_detail.xml" value="0.1" />
+        <entry key="..\:/ANDROID/Proyectos/Producto_AplicacionesMoviles/app/src/main/res/layout/fragment_doctor_detail.xml" value="0.264" />
         <entry key="..\:/ANDROID/Proyectos/Producto_AplicacionesMoviles/app/src/main/res/layout/fragment_home.xml" value="0.264" />
         <entry key="..\:/ANDROID/Proyectos/Producto_AplicacionesMoviles/app/src/main/res/layout/fragment_perfil.xml" value="0.264" />
         <entry key="..\:/ANDROID/Proyectos/Producto_AplicacionesMoviles/app/src/main/res/layout/fragment_specialty.xml" value="0.2" />
@@ -44,6 +44,8 @@
         <entry key="..\:/ANDROID/Proyectos/Producto_AplicacionesMoviles/app/src/main/res/layout/item_consultas_pendientes.xml" value="0.264" />
         <entry key="..\:/ANDROID/Proyectos/Producto_AplicacionesMoviles/app/src/main/res/layout/item_especialty.xml" value="0.2" />
         <entry key="..\:/ANDROID/Proyectos/Producto_AplicacionesMoviles/app/src/main/res/layout/item_specialty_doctor.xml" value="0.264" />
+        <entry key="..\:/ANDROID/Proyectos/Producto_AplicacionesMoviles/app/src/main/res/layout/item_specialty_spinner.xml" value="0.17135416666666667" />
+        <entry key="..\:/ANDROID/Proyectos/Producto_AplicacionesMoviles/app/src/main/res/layout/item_specialtydoctor_spinner.xml" value="0.18802083333333333" />
         <entry key="..\:/ANDROID/Proyectos/Producto_AplicacionesMoviles/app/src/main/res/layout/item_workday.xml" value="0.264" />
         <entry key="..\:/ANDROID/Proyectos/Producto_AplicacionesMoviles/app/src/main/res/layout/test_specialty_fragment_item.xml" value="0.19739583333333333" />
         <entry key="..\:/ANDROID/Proyectos/Producto_AplicacionesMoviles/app/src/main/res/layout/test_specialty_fragment_item_list.xml" value="0.19739583333333333" />

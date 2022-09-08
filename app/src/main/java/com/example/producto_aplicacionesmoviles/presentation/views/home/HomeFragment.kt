@@ -29,8 +29,9 @@ class HomeFragment : Fragment() {
             val action = AppGraphDirections.actionGlobalNavigationSpecialty()
             findNavController().navigate(action)
         }
-        binding.cardRegistroConsulta.setOnClickListener{
-            val action = AppGraphDirections.actionGlobalNavigationConsultas()
+
+        binding.cardCrearConsulta.setOnClickListener{
+            val action = HomeFragmentDirections.actionHomeFragmentToConsultaCreateFragment()
             findNavController().navigate(action)
         }
 

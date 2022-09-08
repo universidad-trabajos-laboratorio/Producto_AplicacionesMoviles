@@ -84,4 +84,6 @@
     <string name="vision">Ser la institución médica líder de la red de salud pacifico sur, con una población sana y con entorno de vida saludables, respondiendo con eficacia y eficiencia los requerimientos de nuestros usuarios internos y externos</string>
     <string name="num_telefono_hospital">(043) 411299</string>
     <string name="label_telefono">Telefono</string>
+    <string name="label_medico">Medico</string>
+    <string name="label_siguiente">Siguiente</string>
 </resources>

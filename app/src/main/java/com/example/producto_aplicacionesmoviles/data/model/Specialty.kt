@@ -9,4 +9,8 @@ data class Specialty(
     var name : String? = null,
     var icon : String? = "path/to/default",
     var active:Boolean? = true,
-): Parcelable
+): Parcelable{
+    override fun toString(): String {
+        return name.toString()
+    }
+}
