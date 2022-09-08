@@ -65,7 +65,7 @@
                 android:id="@+id/rvConsultasPendientes"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingRight="4dp" />
+                android:paddingStart="8dp" />
 
 <!--            <TextView-->
 <!--                android:layout_width="match_parent"-->
