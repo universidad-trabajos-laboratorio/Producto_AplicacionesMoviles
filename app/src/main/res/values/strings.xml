@@ -86,4 +86,7 @@
     <string name="label_telefono">Telefono</string>
     <string name="label_medico">Medico</string>
     <string name="label_siguiente">Siguiente</string>
+    <string name="label_horario">Horario</string>
+    <string name="label_horario_atencion">Horario de Atencion</string>
+    <string name="label_fecha">Fecha</string>
 </resources>

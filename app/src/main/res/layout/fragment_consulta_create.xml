@@ -104,6 +104,51 @@
                     android:inputType="none"
                     />
             </com.google.android.material.textfield.TextInputLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="15dp"
+                android:text="@string/label_fecha"
+                android:textColor="#363636"
+                android:textSize="16sp"
+
+                />
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:hint="@string/label_fecha"
+                >
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/eDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:focusable="false"
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="15dp"
+                android:text="@string/label_horario"
+                android:textColor="#363636"
+                android:textSize="16sp" />
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+                <AutoCompleteTextView
+
+                    android:id="@+id/autocomleteHorario"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/label_horario_atencion"
+                    android:inputType="none"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
             <Button
                 android:id="@+id/btn_siguiente"
                 android:layout_width="match_parent"
