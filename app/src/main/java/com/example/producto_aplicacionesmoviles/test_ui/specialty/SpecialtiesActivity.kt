@@ -5,14 +5,8 @@ import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import com.example.producto_aplicacionesmoviles.R
 import com.example.producto_aplicacionesmoviles.core.TimeUtils
-import com.example.producto_aplicacionesmoviles.data.model.Specialty
-import com.example.producto_aplicacionesmoviles.data.model.SpecialtyDoctor
-import com.example.producto_aplicacionesmoviles.data.model.User
-import com.example.producto_aplicacionesmoviles.data.model.WorkDay
-import com.example.producto_aplicacionesmoviles.viewmodels.SpecialtyDoctorsViewModel
-import com.example.producto_aplicacionesmoviles.viewmodels.SpecialtyViewModel
-import com.example.producto_aplicacionesmoviles.viewmodels.UsersViewModel
-import com.example.producto_aplicacionesmoviles.viewmodels.WorkDaysViewModel
+import com.example.producto_aplicacionesmoviles.data.model.*
+import com.example.producto_aplicacionesmoviles.viewmodels.*
 import dagger.hilt.android.AndroidEntryPoint
 import java.util.*
 
@@ -23,6 +17,7 @@ class SpecialtiesActivity : AppCompatActivity() {
     private val userViewModel: UsersViewModel by viewModels()
     private val specialtyDoctorsViewModel: SpecialtyDoctorsViewModel by viewModels()
     private val workDayViewModel: WorkDaysViewModel by viewModels()
+    private val appointmentsViewModel: AppointmentsViewModel by viewModels()
     var i = 0
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,6 +31,7 @@ class SpecialtiesActivity : AppCompatActivity() {
         //uploadUsers(i)
         //uploadSpecialtyDoctors(i)
         //uploadWorkDays(i)
+        //uploadAppointments(i)
         i += 1
     }
 
@@ -246,5 +242,46 @@ class SpecialtiesActivity : AppCompatActivity() {
         }
 
     }
+
+    fun uploadAppointments(i: Int){
+
+        // Horario de atencion para citas de 7 y 12 y de 15 a 20
+        val list : List<Appointment> = listOf(
+            Appointment(
+                specialty_id = "cR4HyNp2Xhiyt7KODaYA", //General
+                doctor_id = "5Ek2RRiHiPu7SQZsB4Wy", // Abel Diaz
+                patient_id = "aQckChryMD7o0CKNwJ1N", //Enfermoncia
+                type = "CONSULTA",
+                scheduled_date = 1662415200,
+                scheduled_time = "01:00:00",
+                status = "FINALIZADA"
+            ),
+            Appointment(
+                specialty_id = "cR4HyNp2Xhiyt7KODaYA", //General
+                doctor_id = "nFuW9zT7zJB0WQsGZ3vF", // Melio Diaz
+                patient_id = "aQckChryMD7o0CKNwJ1N", //Enfermoncia
+                type = "CONSULTA",
+                scheduled_date = 1662591600,
+                scheduled_time = "01:00:00",
+                status = "FINALIZADA"
+            ),
+            Appointment(
+                specialty_id = "cR4HyNp2Xhiyt7KODaYA", //General
+                doctor_id = "nFuW9zT7zJB0WQsGZ3vF", // Melio Diaz
+                patient_id = "aQckChryMD7o0CKNwJ1N", //Enfermoncia
+                type = "CONSULTA",
+                scheduled_date = 1662764400,
+                scheduled_time = "01:00:00",
+                status = "PENDIENTE"
+            )
+        )
+
+        list.forEach{
+            appointmentsViewModel.addAppointment(it.specialty_id,it.doctor_id, it.patient_id,
+                it.type, it.scheduled_date, it.scheduled_time, it.status)
+        }
+
+    }
+
 
 }
