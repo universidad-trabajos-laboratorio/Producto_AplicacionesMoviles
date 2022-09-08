@@ -23,7 +23,7 @@ class AppointmentsRepositoryImpl @Inject constructor(
 
     override fun getAppointmentFromFirestore(): Flow<Response<List<Appointment>>> = callbackFlow {
         val snapshotListener = appointmentsRef
-            .whereNotEqualTo(Constants.APPOINTMENT_STATUS_FIELD.uppercase(), cancelStatus)
+            .whereNotEqualTo(Constants.APPOINTMENT_STATUS_FIELD, cancelStatus)
             .addSnapshotListener { snapshot, e ->
                 val response = if (snapshot != null) {
                     val appointments = snapshot.toObjects(Appointment::class.java)
@@ -40,7 +40,7 @@ class AppointmentsRepositoryImpl @Inject constructor(
 
     override fun getAppointmentsByPatientIdFromFirestore(patientId: String): Flow<Response<List<Appointment>>>  = callbackFlow {
         val snapshotListener = appointmentsRef
-            .whereNotEqualTo(Constants.APPOINTMENT_STATUS_FIELD.uppercase(), cancelStatus)
+            .whereNotEqualTo(Constants.APPOINTMENT_STATUS_FIELD, cancelStatus)
             .whereEqualTo(Constants.APPOINTMENT_PATIENT_ID_FIELD, patientId)
             .addSnapshotListener { snapshot, e ->
                 val response = if (snapshot != null) {
