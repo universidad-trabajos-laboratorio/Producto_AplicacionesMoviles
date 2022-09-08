@@ -22,4 +22,10 @@ object Constants {
     const val WORKDAY_USER_ID_FIELD = "doctor_id"
     const val WORKDAY_ACTIVE_FIELD = "active"
     const val WORKDAY_DAY_FIELD = "day"
+
+    const val APPOINTMENT_COLLECTION_NAME = "appointments"
+    const val APPOINTMENT_DOCTOR_ID_FIELD = "doctor_id"
+    const val APPOINTMENT_PATIENT_ID_FIELD = "patient_id"
+    const val APPOINTMENT_SCHEDULED_DATE_FIELD = "scheduled_date"
+    const val APPOINTMENT_STATUS_FIELD = "status"
 }

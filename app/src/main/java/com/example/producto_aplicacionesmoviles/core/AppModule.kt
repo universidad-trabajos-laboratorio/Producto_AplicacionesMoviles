@@ -1,21 +1,14 @@
 package com.example.producto_aplicacionesmoviles.core
 
+import com.example.producto_aplicacionesmoviles.core.Constants.APPOINTMENT_COLLECTION_NAME
 import com.example.producto_aplicacionesmoviles.core.Constants.SPECIALTY_COLLECTION_NAME
 import com.example.producto_aplicacionesmoviles.core.Constants.SPECIALTY_DOCTOR_COLLECTION_NAME
 import com.example.producto_aplicacionesmoviles.core.Constants.USER_COLLECTION_NAME
 import com.example.producto_aplicacionesmoviles.core.Constants.WORKDAY_COLLECTION_NAME
-import com.example.producto_aplicacionesmoviles.data.repository.SpecialtiesRepositoryImpl
-import com.example.producto_aplicacionesmoviles.data.repository.SpecialtyDoctorsRepositoryImpl
-import com.example.producto_aplicacionesmoviles.data.repository.UsersRepositoryImpl
-import com.example.producto_aplicacionesmoviles.data.repository.WorkDaysRepositoryImpl
-import com.example.producto_aplicacionesmoviles.domain.repository.SpecialtiesRepository
-import com.example.producto_aplicacionesmoviles.domain.repository.SpecialtyDoctorsRepository
-import com.example.producto_aplicacionesmoviles.domain.repository.UsersRepository
-import com.example.producto_aplicacionesmoviles.domain.repository.WorkDaysRepository
-import com.example.producto_aplicacionesmoviles.domain.use_case.SpecialtyDoctorUseCases
-import com.example.producto_aplicacionesmoviles.domain.use_case.SpecialtyUseCases
-import com.example.producto_aplicacionesmoviles.domain.use_case.UserUseCases
-import com.example.producto_aplicacionesmoviles.domain.use_case.WorkDaysUseCases
+import com.example.producto_aplicacionesmoviles.data.repository.*
+import com.example.producto_aplicacionesmoviles.domain.repository.*
+import com.example.producto_aplicacionesmoviles.domain.use_case.*
+import com.example.producto_aplicacionesmoviles.domain.use_case.appointments.*
 import com.example.producto_aplicacionesmoviles.domain.use_case.specialty.AddSpecialty
 import com.example.producto_aplicacionesmoviles.domain.use_case.specialty.DeleteSpecialty
 import com.example.producto_aplicacionesmoviles.domain.use_case.specialty.GetSpecialty
@@ -63,6 +56,11 @@ object AppModule {
     ): WorkDaysRepository = WorkDaysRepositoryImpl(db.collection(WORKDAY_COLLECTION_NAME))
 
     @Provides
+    fun provideAppointmentsRepository(
+        db: FirebaseFirestore
+    ): AppointmentsRepository = AppointmentsRepositoryImpl(db.collection(APPOINTMENT_COLLECTION_NAME))
+
+    @Provides
     fun provideUserUseCases(
         repo: UsersRepository
     ) : UserUseCases = UserUseCases(
@@ -100,6 +98,17 @@ object AppModule {
         getWorkDaysByUserId = GetWorkDaysByUserId(repo),
         addWorkDay = AddWorkDay(repo),
         deleteWorkDay = DeleteWorkDay(repo)
+    )
+
+    @Provides
+    fun provideAppointmentsCases(
+        repo: AppointmentsRepository
+    ) : AppointmentsUseCases = AppointmentsUseCases(
+        getAppointments = GetAppointments(repo),
+        getAppointmentsByDateAndPatientId = GetAppointmentsByDateAndPatientId(repo),
+        getAppointmentsByPatientId = GetAppointmentsByPatientId(repo),
+        addAppointment = AddAppointment(repo),
+        deleteAppointment = DeleteAppointment(repo)
     )
 
 }
